@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人幸福能力</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+    <link rel="stylesheet" href="./css/react.css">
+    <style>
+        @font-face {
+            font-family: "SourceHanSansCN-Bold";
+            src: url("./typeface/SourceHanSansCN-Bold.woff2") format("woff2"),
+                url("./typeface/SourceHanSansCN-Bold.woff") format("woff"),
+                url("./typeface/SourceHanSansCN-Bold.ttf") format("truetype"),
+                url("./typeface/SourceHanSansCN-Bold.eot") format("embedded-opentype"),
+                url("./typeface/SourceHanSansCN-Bold.svg") format("svg");
+        }
+
+        .contanier {
+            width: 100%;
+        }
+
+        section {
+            width: 100%;
+            height: '';
+            box-sizing: border-box;
+            font-size: 8px;
+            font-family: 'SourceHanSansCN-Bold';
+
+        }
+
+        section>img {
+            width: 100%;
+        }
+
+
+        .index {
+            padding: 10px 0;
+        }
+
+        .index .userInfo {
+            height: 18.5%;
+            background: linear-gradient(to right, #e4e2e3, white);
+            width: 95%;
+            margin: -2px auto;
+        }
+
+        .index .userInfo ul {
+            overflow: hidden;
+            padding-top: 3.5rem;
+        }
+
+        .index .userInfo ul li {
+            float: left;
+            text-align: left;
+            font-size: 16px;
+            text-indent: 25px;
+            width: 35%;
+            color: #4DA571;
+            font-family: "SourceHanSansCN-Bold";
+            line-height: 2rem;
+            font-weight: bold;
+        }
+
+        .introduce .border {
+            width: 100%;
+            height: 83.6%;
+            margin-top: -2px;
+            padding-top: 55px;
+        }
+
+        .introduce .border .content {
+            height: 90vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .introduce .content>p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+        }
+
+        .introduce .content>table {
+            margin-top: 30px;
+            border: 1px solid #E8E8E8;
+            height: 31%;
+            width: 100%;
+            font-size: 16px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.65);
+            line-height: 24px;
+        }
+
+        .introduce .content>table>tr:nth-child(1) {
+            background-color: #EDEDED;
+        }
+
+        .introduce .content table .tr {
+            border-bottom: 1px solid #E8E8E8;
+        }
+
+        .introduce .content table .th {
+            border-right: 1px solid #e8e8e8;
+            width: 65px;
+            padding: 15px;
+        }
+
+        .introduce .content table td {
+            padding: 15px;
+        }
+
+        .introduce .content .advice {
+            height: 50px;
+            width: 100%;
+            background-color: #EDEDED;
+            margin-top: 50px;
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+            text-align: center;
+            line-height: 3em;
+        }
+
+        .introduce .content .con {
+            width: 100%;
+            height: 40%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .introduce .content .yuandian {
+            width: 10px;
+            height: 10px;
+            background-color: #4DA571;
+            border-radius: 5px;
+            float: left;
+            clear: both;
+            margin-top: 10px;
+        }
+
+        .introduce .content .wenzi {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 20px;
+            float: left;
+            clear: both;
+            margin-top: -13px;
+            margin-left: 20px;
+            margin-bottom: 25px;
+        }
+
+
+
+        .results .border {
+            width: 100%;
+            height: 83.6%;
+            margin-top: -2px;
+            padding-top: 55px;
+        }
+
+        .results .border .content {
+            height: 90vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .results .border .content>p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(232, 160, 16, 1);
+            line-height: 24px;
+        }
+
+        .results .content>img {
+            margin-top: 30px;
+            margin-left: 22%;
+        }
+
+        .results .content .con_data {
+            width: 100%;
+            height: 410px;
+            margin-top: 50px;
+            overflow: hidden;
+        }
+
+        .results .con_data .classify {
+            width: 24.5%;
+            height: 100%;
+            float: left;
+            margin-left: 3px;
+            border-radius: 5px;
+        }
+
+        .results .classify>p {
+            margin-left: 20px;
+            font-size: 16px;
+            font-family: SourceHanSansCN-Medium;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        .results .classify .class_res {
+            width: 75%;
+            height: 90%;
+            margin-left: 20px;
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .results .class_res>p {
+            margin-left: 50px;
+            padding-top: 150px;
+            margin-left: 50px;
+            padding-top: 150px;
+        }
+
+        .results .class_res .data {
+            width: 100%;
+            overflow: hidden;
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 30px;
+            margin-top: 15px;
+        }
+
+        .results .class_res .data .res {
+            float: left;
+            margin-right: 48px;
+        }
+
+
+
+        .explain .border {
+            width: 100%;
+            height: 84.8%;
+            margin-top: -2px;
+            padding-top: 40px;
+            padding-left: 10px;
+            background-color: #EDEDED;
+        }
+
+        .explain .border .content {
+            height: 90vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .explain .content .char {
+            background-color: rgba(77, 165, 113, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+            line-height: 21px;
+        }
+
+        .explain .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(77, 165, 113, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .explain .content .explain_type {
+            width: 100%;
+            height: 100%;
+        }
+
+        .explain .explain_type .extype {
+            margin-bottom: 23px;
+            width: 41.5%;
+            height: 44%;
+            background-color: #fff;
+            float: left;
+            margin-right: 25px;
+            padding: 15px;
+        }
+
+        .explain .explain_type .extype>h1 {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+
+        .explain .explain_type .extype>i {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(155, 155, 155, 1);
+            line-height: 18px;
+        }
+
+        .explain .explain_type .extype .points {
+            width: 130px;
+            height: 50px;
+            margin-top: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .explain .explain_type .points p {
+            font-size: 13px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(155, 155, 155, 1);
+            line-height: 20px;
+        }
+
+        .explain .explain_type .points .sta {
+            height: 100%;
+            float: left;
+            margin-right: 50px;
+        }
+
+        .explain .explain_type .points .ori {
+            height: 100%;
+            float: left;
+        }
+
+        .explain .explain_type .points .norm,
+        .explain .explain_type .points .original {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            line-height: 24px;
+            text-align: center;
+            font-size: 16px;
+            color: rgba(51, 51, 51, 1);
+        }
+
+        /* .red {
+            color: rgba(225, 70, 25, 1) !important;
+        }
+
+        .green {
+            color: #4DA571 !important;
+        }
+
+        .blue {
+            color: #3D87FF !important;
+        }
+
+        .zise {
+            color: #6A1EDA !important;
+        } */
+
+        .explain .explain_type .extype>b {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .explain .explain_type .extype>b>i {
+            color: #E8A010;
+        }
+
+        .explain .explain_type .extype .progressA .progress {
+            height: 7px;
+            width: 240px;
+            background-color: #ccc;
+            margin-top: 20px;
+            border-radius: 5px;
+            float: left;
+        }
+
+        .explain .explain_type .extype .progressA>span {
+            position: absolute;
+            top: 14px;
+            right: 20px;
+            font-size: 14px;
+            color: rgba(51, 51, 51, 1);
+        }
+
+        .explain .extype .progress .pro {
+            width: 45%;
+            background-color: #4DA571;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .explain .extype>p {
+            margin-top: 10px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body body class="A4">
+    <section class="index sheet">
+        <img src="./img/PEOI2019_picture01.png" style="margin-top: -10px">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span id="Name">刘坚</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span id="Gender">女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span id="Age">18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span id="TestTime">2019年3月28日</span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/PEOI2019_picture06.png" style="height: 10%;margin-top: -2mm;">
+    </section>
+
+    <section class="introduce sheet">
+        <img src="./img/PEOI2019_picture02.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <p>幸福能力是个体感知、创造幸福的心理能力，是个体幸福体验的内在原因。本测验从解决问题、追求发展和适应环境三个方面帮助您了解为自己创造幸福的能力。</p>
+                <table>
+                    <tr style="background-color: #EDEDED;height: 55px;">
+                        <th class="th">部分</th>
+                        <th>含义</th>
+                    </tr>
+                    <tr class="tr">
+                        <td class="th">问题解决</td>
+                        <td>是个体面对困难、挑战和压力时，在乐观积极、自信坚韧、合理归因、情绪调节方面的能力</td>
+                    </tr>
+                    <tr class="tr">
+                        <td class="th">追求发展</td>
+                        <td>是个体面对自我的探索和发展时，在自主定向、意义寻求、专注投入、自我拓展方面的能力</td>
+                    </tr>
+                    <tr class="tr">
+                        <td class="th">环境适应</td>
+                        <td>是个体与他人及事物互动过程时，在灵活变通、包容差异、亲和利他、自我悦纳方面的能力</td>
+                    </tr>
+                </table>
+                <div class="advice">报告阅读建议</div>
+                <div class="con">
+                    <p class="yuandian"></p>
+                    <p class="wenzi">本报告基于您对幸福能力测评问卷的回答生成。</p>
+
+                    <p class="yuandian"></p>
+                    <p class="wenzi">相对典型的面谈而言，测评问卷的设计是为了更客观的对幸福能力进行评估。</p>
+
+                    <p class="yuandian"></p>
+                    <p class="wenzi">测评结果通过标准 10
+                        分(Sten10)和原始分表示。其中，原始分即是您在所有题目上得分的总和，标准10分由原始分转换而来，表现您在群体中所处的位置。一般情况下，两种分都是越高越可取。</p>
+
+                    <p class="yuandian"></p>
+                    <p class="wenzi">在缺乏相关专业知识的情况下，请谨慎使用报告中的信息或求助于专家。</p>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PEOI2019_picture07.png" alt="">
+    </section>
+
+    <section class="results sheet">
+        <img src="./img/PEOI2019_picture02(1).png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <p>提示:下方的雷达图使用评分标准(sten10)展示您所在的位置，各维度对应的原始分显示在四个颜色区块内。</p>
+                <img src="./img/PEOI2019_radar.png" alt="">
+                <div class="con_data">
+                    <div class="classify1 classify" style="background-color: #d5f6e5;">
+                        <p style="color: #1CCA6B;font-weight: bold;">优势得分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+                                style="font-weight: bold;">得分</i></p>
+                        <div class="class_res " id="advantage"></div>
+                    </div>
+                    <div class="classify2 classify" style="background-color: #d8e7ff;">
+                        <p style="color: rgba(61, 135, 255, 1);font-weight: bold;">
+                            保持指标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style="font-weight: bold;">得分</i></p>
+                        <div class="class_res" id="keep">
+
+                        </div>
+                    </div>
+                    <div class="classify3 classify" style="background-color: #e1d2f8;">
+                        <p style="color: rgba(106, 30, 218, 1);font-weight: bold;">
+                            关注指标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style="font-weight: bold;">得分</i></p>
+                        <div class="class_res" id="attention">
+
+                        </div>
+                    </div>
+                    <div class="classify4 classify" style="background-color: #ffd8cc;">
+                        <p style="color: rgba(225, 70, 25, 1);font-weight: bold;">
+                            改进指标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style="font-weight: bold;">得分</i></p>
+                        <div class="class_res" id="improve">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PEOI2019_picture07(1).png" alt="">
+    </section>
+
+    <!-- 问题解决 -->
+    <section class="explain sheet">
+        <img src="./img/PEOI2019_picture02(2).png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char">问题解决</div>
+                <div class="jiao"></div><br><br><br><br><br>
+                <div class="explain_type">
+                    <div class="extype" id="leguan">
+                        <h1>乐观积极</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="lgjj_rank">1</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="lgjj_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="lgjj_cdf">1.55%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="lgjj_pro"></div>
+                            </div><span id="lgjj_rank1">1分</span>
+                        </div><br><br><br>
+                        <p id="lgjj_desc">您在工作中的问题或生活上的得失的看法相当消极，在挫折和困境中往往会怀疑自己，对未来存在观望或悲观情绪， 经常感到无助。</p>
+                    </div>
+                    <div class="extype" id="leguan2">
+                        <h1>自信坚韧</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="zxjr_rank">6</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="zxjr_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="zxjr_cdf">9.55%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="zxjr_pro"></div>
+                            </div><span id="zxjr_rank1">1分</span>
+                        </div><br><br><br>
+                        <p id="zxjr_desc">您对自己的能力不太有信心，往往高估工作内容的难度。和大多数人相比，您不善于应对挑战和工作压力，或处理在短
+                            期内较高强度的工作。要较长的时间才能从挫折和批评中恢复过来，重新投入到工作中。
+                        </p>
+                    </div>
+                    <div class="extype" id="leguan3">
+                        <h1>合理归因</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="hlgy_rank">4</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="hlgy_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="hlgy_cdf">23.53%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="hlgy_pro"></div>
+                            </div><span id="hlgy_rank1">1分</span>
+                        </div><br><br><br>
+                        <p id="hlgy_desc">您有从全面、发展、客观的角度分析和看待问题的意识，但有时还是会陷入过于具体或只针对问题某一个单独方面的 思维方式中。</p>
+                    </div>
+                    <div class="extype" id="leguan4">
+                        <h1>情绪调节</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="qxtj_rank">8</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="qxtj_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="qxtj_cdf">20.53%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="qxtj_pro"></div>
+                            </div><span id="qxtj_rank1">1分</span>
+                        </div><br><br><br>
+                        <p>您在一般情况下不会让情绪影响到理性思维，不倾向与认为他人的批评是完全针对自己个人的。在面对持久的压力或
+                            挫折时，一定程度上能够调节自己的情绪，维持正常的工作状态，但有时会在肢体语言上表现出一定的紧张。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PEOI2019_picture07(2).png" alt="">
+    </section>
+
+    <!-- 追求发展 -->
+    <section class="explain sheet">
+        <img src="./img/PEOI2019_picture02(2).png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char">追求发展</div>
+                <div class="jiao"></div><br><br><br><br><br>
+                <div class="explain_type">
+                    <div class="extype">
+                        <h1>自主定向</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="zzdx_rank">1</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="zzdx_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="zzdx_cdf">1.55%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="zzdx_pro"></div>
+                            </div><span id="zzdx_rank1">1分</span>
+                        </div><br><br><br>
+                        <p id="zzdx_desc">您可能对自己的发展方向和目标没有太多思考，面对选择时更多服从主流和权威意见，在没有他人的管理和支持下会显得无所适从。</p>
+                    </div>
+                    <div class="extype">
+                        <h1>意义寻求</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="yyxq_rank">6</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="yyxq_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="yyxq_cdf">9.55%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="yyxq_pro"></div>
+                            </div><span id="yyxq_rank1">1分</span>
+                        </div><br><br><br>
+                        <p id="yyxq_desc">您能够一定程度上从工作和生活照中寻求意义和价值，并付出一些努力达成预设的目标，但有时会受到外界因素的影 响。</p>
+                    </div>
+                    <div class="extype">
+                        <h1>专注投入</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="zztr_rank">4</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="zztr_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="zztr_cdf">23.53%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="zztr_pro"></div>
+                            </div><span id="zztr_rank1">1分</span>
+                        </div><br><br><br>
+                        <p id="zztr_desc">您能够在处理大部分的工作时保持精力充沛，并能够在安排自己的工作计划上有一定的考虑。但在任务不再新颖或不
+                            具有挑战性时，您可能不太能够保持注意力的集中，不是特别胜任持续的常规或重复性的工作。</p>
+                    </div>
+                    <div class="extype">
+                        <h1>自我拓展</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="zwtz_rank">8</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="zwtz_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="zwtz_cdf">20.53%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="zwtz_pro"></div>
+                            </div><span id="zwtz_rank">1分</span>
+                        </div><br><br><br>
+                        <p id="zwtz_desc">您在工作中比较拘泥于已有的生活经验，很少做出一些尝试来发展、兑现自身的能力和潜力，比较缺乏提升自己的知 识和技能的意识。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PEOI2019_picture07(3).png" alt="">
+    </section>
+
+    <!-- 环境适应 -->
+    <section class="explain sheet">
+        <img src="./img/PEOI2019_picture02(2).png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char">灵活变通</div>
+                <div class="jiao"></div><br><br><br><br><br>
+                <div class="explain_type">
+                    <div class="extype">
+                        <h1>灵活变通</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="lhbt_rank">1</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="lhbt_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="lhbt_cdf">1.55%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="lhbt_pro"></div>
+                            </div><span id="lhbt_rank1">1分</span>
+                        </div><br><br><br>
+                        <p id="lhbt_desc">
+                            您看待事物的方式和大多数人相同，能够接受部分新奇的、非传统的观点和工作方法，在必要时不会拘泥于维持现状。在身处快速变化，需要不断调整自身应对方式的环境时，需要一些时间来适应。</p>
+                    </div>
+                    <div class="extype">
+                        <h1>包容差异</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="brcy_rank">6</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="brcy_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="brcy_cdf">9.55%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="brcy_pro"></div>
+                            </div><span id="brcy_rank1">1分</span>
+                        </div><br><br><br>
+                        <p id="brcy_desc">和大多数人一样，您能够正常的和他人建立起信任关系，在正常情况下不倾向于非原则性的问题和他人对峙或冲突， 能够在一定程度上接受他人的不同意见和处事风格。
+                        </p>
+                    </div>
+                    <div class="extype">
+                        <h1>亲和利他</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="qhlt_rank">4</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="qhlt_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="qhlt_cdf">23.53%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="qhlt_pro"></div>
+                            </div><span id="qhlt_rank1">1分</span>
+                        </div><br><br><br>
+                        <p id="qhlt_pro">您待人和大多数人一样友善，对人比较开放和友好。虽然在和陌生人交往时可能不会表现的非常主动和热情，您仍然
+                            颇具合作精神、常常能够热心助人，并在能力范围内满足他人的合理要求。</p>
+                    </div>
+                    <div class="extype">
+                        <h1>自我悦纳</h1>
+                        <i>您在该指标上的得分：</i>
+                        <div class="points">
+                            <div class="sta">
+                                <p class="norm red" id="zwyn_rank">8</p>
+                                <p>标准分</p>
+                            </div>
+                            <div class="ori">
+                                <p class="original" id="zwyn_pt">31.25</p>
+                                <p>原始分</p>
+                            </div>
+                        </div>
+                        <b>比<i id="zwyn_cdf">20.53%</i>的人高</b>
+
+                        <!-- 进度条 -->
+                        <div class="progressA" style="position: relative;">
+                            <div class="progress">
+                                <div class="pro" id="zwyn_pro"></div>
+                            </div><span id="zwyn_rank">1分</span>
+                        </div><br><br><br>
+                        <p id="zwyn_desc">您不太能够客观评价自身的长处，比较介意自身的缺点和不足，在遇到挫折和困难时倾向于过低的评价自己。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PEOI2019_picture07(4).png" alt="">
+    </section>
+
+    <section class="footer sheet">
+        <img src="./img/PEOI2019_picture05.png">
+    </section>
+
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+        var context = "";
+        if (r != null)
+            context = r[2];
+        reg = null;
+        r = null;
+        return context == null || context == "" || context == "undefined" ? "" : context;
+    }
+
+    let people_result_id = this.GetQueryString('people_result_id');
+
+    $.ajax({
+        url: 'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
+        // url:'http://assess.admin.iwedoing.com/api/client/v1/front/report/data/',
+        type: 'POST',
+        data: {
+            // people_result_id: 90777,
+            people_result_id: people_result_id,
+            report_type_id: 'PEOI2019'
+        },
+        dataType: 'json',
+        success: function (res) {
+
+            let data = res;
+            console.log(res.detail.report_data.msg)
+            if (data.code == 0) {
+                let result = data.detail.report_data.msg;
+                AddDom(result);
+            } else {
+                alert('请求数据有误')
+            }
+        }
+    })
+    function ceshijieguo(el, data) {
+        // 优势得分
+        let fathYS = el;
+        let advantage = data;
+        // console.log(data)
+        if (advantage.length == 0) {
+            let ZW = $('<p class="zw" style="color: rgba(168, 168, 168, 1);">暂无</p>')
+            fathYS.append(ZW)
+        } else if (advantage.length != 0) {
+            let RES_DATA = $('<div class="data"></div>')
+            $.each(advantage, function (key, value) {
+                let PRES = $('<p class="res">' + value.name + '</p>')
+                RES_DATA.append(PRES)
+                let NUM = $('<p class="num">' + value.value + '</p>')
+                RES_DATA.append(NUM)
+            })
+            fathYS.append(RES_DATA)
+        }
+    }
+
+    function AddDom(data) {
+        $('#Name').text(data.Name)
+        $('#Age').text(data.Age)
+        $('#Gender').text(data.Gender)
+        $('#TestTime').text(data.TestTime);
+        let youshi = new Array();
+        let baochi = new Array();
+        let guanzhu = new Array();
+        let gaijin = new Array();
+
+        let newyoushi = new Array();
+        let newbaochi = new Array();
+        let newguanzhu = new Array();
+        let newgaijin = new Array();
+
+        $.each(data.ranks, function (i1, item1) {
+            if (i1 == 1) {
+                gaijin = item1;
+            } else if (i1 == 2) {
+                guanzhu = item1;
+            } else if (i1 == 3) {
+                baochi = item1;
+            } else {
+                youshi = item1
+            }
+        })
+        $.each(data.scores, function (i1, item1) {
+            $.each(youshi, function (i2, item2) {
+                if (i1 == item2) {
+                    newyoushi.push({ name: i1, value: item1.rank });
+                }
+            })
+            $.each(baochi, function (i2, item2) {
+                if (i1 == item2) {
+                    newbaochi.push({ name: i1, value: item1.rank });
+                }
+            })
+            $.each(guanzhu, function (i2, item2) {
+                if (i1 == item2) {
+                    newguanzhu.push({ name: i1, value: item1.rank });
+                }
+            })
+            $.each(gaijin, function (i2, item2) {
+                if (i1 == item2) {
+                    newgaijin.push({ name: i1, value: item1.rank });
+                }
+            })
+        })
+        console.log(newyoushi, newbaochi, newguanzhu, newgaijin)
+
+
+
+
+        ceshijieguo($('.class_res').eq(3), newgaijin)
+        ceshijieguo($('.class_res').eq(2), newguanzhu)
+        ceshijieguo($('.class_res').eq(1), newbaochi)
+        ceshijieguo($('.class_res').eq(0), newyoushi)
+
+        console.log(newbaochi)
+
+
+
+
+        //详情
+        let EXPLAINTYPE = $('.extype');
+        let EXPLAINTYPE_arr = [];
+
+        $.each(EXPLAINTYPE, function (i, item) {
+            console.log(item)
+            //EXPLAINTYPE_arr.push(item.getElementsByTagName('h1')[0].innerHTML);
+            let biaozhunfen = item.getElementsByClassName('points')[0].getElementsByClassName('sta')[0].getElementsByClassName('norm')[0];
+            let progress = item.getElementsByClassName('progressA')[0].getElementsByClassName('progress')[0].getElementsByClassName('pro')[0];
+            //let progressfen = item.getElementsByClassName('progressA')[0].getElementsByClassName('pro_fen1')[0];
+            //console.log(progressfen)
+            console.log(newgaijin)
+
+            $.each(newgaijin, function (i2, item2) {
+
+                if (item2.name == item.getElementsByTagName('h1')[0].innerHTML) {
+                    biaozhunfen.style.color = 'rgba(225, 70, 25, 1)'
+                    biaozhunfen.innerHTML = item2.value;
+                    progress.style.background = 'rgba(225, 70, 25, 1)'
+
+                    progress.style.width = (item2.value * 10) + '%'
+
+                    //progressfen.style.color='#d8e7ff'
+
+                    //  progressfen.innerHTML = item2.value;
+                }
+            })
+
+            $.each(newguanzhu, function (i2, item2) {
+
+                if (item2.name == item.getElementsByTagName('h1')[0].innerHTML) {
+                    biaozhunfen.style.color = 'rgba(106, 30, 218, 1)'
+                    biaozhunfen.innerHTML = item2.value;
+                    progress.style.background = 'rgba(106, 30, 218, 1)'
+
+                    progress.style.width = (item2.value * 10) + '%'
+
+                    //progressfen.style.color='#d8e7ff'
+
+                    //  progressfen.innerHTML = item2.value;
+                }
+            })
+
+            $.each(newbaochi, function (i2, item2) {
+
+                if (item2.name == item.getElementsByTagName('h1')[0].innerHTML) {
+                    biaozhunfen.style.color = 'rgba(61, 135, 255, 1)'
+                    biaozhunfen.innerHTML = item2.value;
+                    progress.style.background = 'rgba(61, 135, 255, 1)'
+
+                    progress.style.width = (item2.value * 10) + '%'
+
+                    //progressfen.style.color='#d8e7ff'
+
+                    //  progressfen.innerHTML = item2.value;
+                }
+            })
+
+            $.each(newyoushi, function (i2, item2) {
+
+                if (item2.name == item.getElementsByTagName('h1')[0].innerHTML) {
+                    biaozhunfen.style.color = '#1CCA6B'
+                    biaozhunfen.innerHTML = item2.value;
+                    progress.style.background = '#1CCA6B'
+
+                    progress.style.width = (item2.value * 10) + '%'
+
+                    //progressfen.style.color='#d8e7ff'
+
+                    //  progressfen.innerHTML = item2.value;
+                }
+            })
+        })
+        console.log(EXPLAINTYPE_arr)
+
+
+        $('#lgjj_rank').text(data.scores['乐观积极'].rank)
+        $('#lgjj_pt').text(data.scores['乐观积极'].pt)
+        $('#lgjj_cdf').text(data.scores['乐观积极'].cdf + '%')
+        $('#lgjj_desc').text(data.scores['乐观积极'].desc)
+        $('#lgjj_pro').css('width', data.scores['乐观积极'].rank + '0%')
+        $('#lgjj_rank1').text(data.scores['乐观积极'].rank + '分')
+
+
+        $('#zxjr_rank').text(data.scores['自信坚韧'].rank)
+        $('#zxjr_pt').text(data.scores['自信坚韧'].pt)
+        $('#zxjr_cdf').text(data.scores['自信坚韧'].cdf + '%')
+        $('#zxjr_desc').text(data.scores['自信坚韧'].desc)
+        $('#zxjr_pro').css('width', data.scores['自信坚韧'].rank + '0%')
+        $('#zxjr_rank1').text(data.scores['自信坚韧'].rank + '分')
+
+        $('#hlgy_rank').text(data.scores['合理归因'].rank)
+        $('#hlgy_pt').text(data.scores['合理归因'].pt)
+        $('#hlgy_cdf').text(data.scores['合理归因'].cdf + '%')
+        $('#hlgy_desc').text(data.scores['合理归因'].desc)
+        $('#hlgy_pro').css('width', data.scores['合理归因'].rank + '0%')
+        $('#hlgy_rank1').text(data.scores['合理归因'].rank + '分')
+
+        $('#qxtj_rank').text(data.scores['情绪调节'].rank)
+        $('#qxtj_pt').text(data.scores['情绪调节'].pt)
+        $('#qxtj_cdf').text(data.scores['情绪调节'].cdf + '%')
+        $('#qxtj_desc').text(data.scores['情绪调节'].desc)
+        $('#qxtj_pro').css('width', data.scores['情绪调节'].rank + '0%')
+        $('#qxtj_rank1').text(data.scores['情绪调节'].rank + '分')
+
+        $('#zzdx_rank').text(data.scores['自主定向'].rank)
+        $('#zzdx_pt').text(data.scores['自主定向'].pt)
+        $('#zzdx_cdf').text(data.scores['自主定向'].cdf + '%')
+        $('#zzdx_desc').text(data.scores['自主定向'].desc)
+        $('#zzdx_pro').css('width', data.scores['自主定向'].rank + '0%')
+        $('#zzdx_rank1').text(data.scores['自主定向'].rank + '分')
+
+        $('#yyxq_rank').text(data.scores['意义寻求'].rank)
+        $('#yyxq_pt').text(data.scores['意义寻求'].pt)
+        $('#yyxq_cdf').text(data.scores['意义寻求'].cdf + '%')
+        $('#yyxq_desc').text(data.scores['意义寻求'].desc)
+        $('#yyxq_pro').css('width', data.scores['意义寻求'].rank + '0%')
+        $('#yyxq_rank1').text(data.scores['意义寻求'].rank + '分')
+
+        $('#zztr_rank').text(data.scores['专注投入'].rank)
+        $('#zztr_pt').text(data.scores['专注投入'].pt)
+        $('#zztr_cdf').text(data.scores['专注投入'].cdf + '%')
+        $('#zztr_desc').text(data.scores['专注投入'].desc)
+        $('#zztr_pro').css('width', data.scores['专注投入'].rank + '0%')
+        $('#zztr_rank1').text(data.scores['专注投入'].rank + '分')
+
+        $('#zwtz_rank').text(data.scores['自我拓展'].rank)
+        $('#zwtz_pt').text(data.scores['自我拓展'].pt)
+        $('#zwtz_cdf').text(data.scores['自我拓展'].cdf + '%')
+        $('#zwtz_desc').text(data.scores['自我拓展'].desc)
+        $('#zwtz_pro').css('width', data.scores['自我拓展'].rank + '0%')
+        $('#zwtz_rank1').text(data.scores['自我拓展'].rank + '分')
+
+        $('#lhbt_rank').text(data.scores['灵活变通'].rank)
+        $('#lhbt_pt').text(data.scores['灵活变通'].pt)
+        $('#lhbt_cdf').text(data.scores['灵活变通'].cdf + '%')
+        $('#lhbt_desc').text(data.scores['灵活变通'].desc)
+        $('#lhbt_pro').css('width', data.scores['灵活变通'].rank + '0%')
+        $('#lhbt_rank1').text(data.scores['灵活变通'].rank + '分')
+
+        $('#brcy_rank').text(data.scores['包容差异'].rank)
+        $('#brcy_pt').text(data.scores['包容差异'].pt)
+        $('#brcy_cdf').text(data.scores['包容差异'].cdf + '%')
+        $('#brcy_desc').text(data.scores['包容差异'].desc)
+        $('#brcy_pro').css('width', data.scores['包容差异'].rank + '0%')
+        $('#brcy_rank1').text(data.scores['包容差异'].rank + '分')
+
+        $('#qhlt_rank').text(data.scores['亲和利他'].rank)
+        $('#qhlt_pt').text(data.scores['亲和利他'].pt)
+        $('#qhlt_cdf').text(data.scores['亲和利他'].cdf + '%')
+        $('#qhlt_desc').text(data.scores['亲和利他'].desc)
+        $('#qhlt_pro').css('width', data.scores['亲和利他'].rank + '0%')
+        $('#qhlt_rank1').text(data.scores['亲和利他'].rank + '分')
+
+        $('#zwyn_rank').text(data.scores['自我悦纳'].rank)
+        $('#zwyn_pt').text(data.scores['自我悦纳'].pt)
+        $('#zwyn_cdf').text(data.scores['自我悦纳'].cdf + '%')
+        $('#zwyn_desc').text(data.scores['自我悦纳'].desc)
+        $('#zwyn_pro').css('width', data.scores['自我悦纳'].rank + '0%')
+        $('#zwyn_rank1').text(data.scores['自我悦纳'].rank + '分')
+
+    }
+</script>
