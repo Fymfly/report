@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>职业心理测评</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+    <link rel="stylesheet" href="./css/react.css">
+    <style>
+        @font-face {
+            font-family: "SourceHanSansCN-Bold";
+            src: url("./typeface/SourceHanSansCN-Bold.woff2") format("woff2"),
+                url("./typeface/SourceHanSansCN-Bold.woff") format("woff"),
+                url("./typeface/SourceHanSansCN-Bold.ttf") format("truetype"),
+                url("./typeface/SourceHanSansCN-Bold.eot") format("embedded-opentype"),
+                url("./typeface/SourceHanSansCN-Bold.svg") format("svg");
+        }
+
+        .contanier {
+            width: 100%;
+        }
+
+        section {
+            width: 100%;
+            height: '';
+            box-sizing: border-box;
+            font-size: 8px;
+            font-family: 'SourceHanSansCN-Bold';
+
+        }
+
+        section>img {
+            width: 100%;
+        }
+
+
+        .index {
+            padding: 10px 0;
+        }
+
+        .index .userInfo {
+            height: 18.5%;
+            background: linear-gradient(to right, #e4e2e3, white);
+            width: 95%;
+            margin: -2px auto;
+        }
+
+        .index .userInfo ul {
+            overflow: hidden;
+            padding-top: 3.5rem;
+        }
+
+        .index .userInfo ul li {
+            float: left;
+            text-align: left;
+            font-size: 16px;
+            text-indent: 25px;
+            width: 35%;
+            color: #EF7E50;
+            font-family: "SourceHanSansCN-Bold";
+            line-height: 2rem;
+            font-weight: bold;
+        }
+
+
+        .explain .border {
+            width: 100%;
+            height: 85.2%;
+            margin-top: -2px;
+            padding-top: 35px;
+        }
+
+        .explain .border .content {
+            height: 100vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+
+        .explain .content .char {
+            background-color: #EF7E50;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+            clear: both;
+            margin-bottom: 5px;
+        }
+
+        .explain .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #EF7E50;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .explain .content .con_top {
+            height: 55%;
+            width: 100%;
+        }
+
+        .explain .content .con_top>p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 25px;
+        }
+
+        .explain .content .con_top>table {
+            width: 100%;
+            height: 52%;
+            border: 1px solid #E8E8E8;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 16px;
+            font-family: PingFangSC-Medium;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 21px;
+        }
+
+        .explain .content .con_top>table tr {
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .explain .con_top>table tr td,
+        th {
+            border-right: 1px solid #e8e8e8;
+        }
+
+        .explain .content .con_bom {
+            height: 40%;
+            width: 100%;
+        }
+
+        .explain .content .con_bom p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 25px;
+        }
+
+        .explain .content .con_bom .attention .yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #FD4A02;
+            float: left;
+        }
+
+        .explain .content .con_bom .attention .wenzi {
+            margin-left: 13px;
+            margin-top: -9px;
+            line-height: 35px;
+        }
+
+        .explain .content .con_bom>pre {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 21px;
+            margin-top: 20px;
+        }
+
+
+
+        .histogram .border {
+            width: 100%;
+            height: 85.3%;
+            margin-top: -2px;
+            padding-top: 35px;
+        }
+
+        .histogram .border .content {
+            height: 100vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .histogram .content>pre {
+            font-size: 15px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+
+        .histogram .content .char {
+            background-color: #EF7E50;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+            clear: both;
+            margin-bottom: 5px;
+        }
+
+        .histogram .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #EF7E50;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .histogram .content h1 {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 21px;
+        }
+
+        .histogram .content .graph {
+            width: 90%;
+            height: 45%;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .histogram .content .graph .gra_line {
+            width: 92%;
+            height: 1px;
+            background-color: #EBECF0;
+            margin-bottom: 55px;
+            margin-left: 50px;
+        }
+
+        .histogram .content .graph .num_list {
+            position: absolute;
+            top: -30px;
+            left: 15px;
+            background-color: rebeccapurple;
+            height: 100%;
+            font-size: 12px;
+            font-family: HelveticaNeue;
+            color: rgba(102, 102, 102, 1);
+            line-height: 57px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .histogram .content .graph .data_list {
+            width: 92%;
+            height: 18%;
+            background-color: skyblue;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .histogram .content .yellow {
+            background-color: #fdf5c7;
+            color: rgba(245, 197, 18, 1);
+        }
+
+        .histogram .content .orger {
+            background-color: #fee7c9;
+            color: #FCAF4D;
+        }
+
+        .histogram .content .red {
+            background-color: #f9cccc;
+            color: #EC5656;
+        }
+
+        .histogram .content .trait {
+            width: 100%;
+            height: 6%;
+            margin-bottom: 20px;
+        }
+
+        .histogram .content .trait span {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            line-height: 4em;
+            margin-left: 20px;
+        }
+
+        .histogram .content .trait>p {
+            display: inline-block;
+            margin-left: 15px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(175, 175, 175, 1);
+            line-height: 21px;
+        }
+
+
+
+        .detailed .border {
+            width: 100%;
+            height: 85.3%;
+            margin-top: -2px;
+            padding-top: 35px;
+        }
+
+        .detailed .border .content {
+            height: 100vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .detailed .content .char {
+            background-color: #EF7E50;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+            clear: both;
+            margin-bottom: 5px;
+        }
+
+        .detailed .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #EF7E50;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .detailed .content .title {
+            overflow: hidden;
+            margin-bottom: 35px;
+        }
+
+        .detailed .content .title .sanjiao {
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-left: 20px solid #EF7E4F;
+            border-bottom: 12px solid transparent;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .detailed .content .title>p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(239, 126, 80, 1);
+            line-height: 24px;
+        }
+
+        .detailed .content .title>p:nth-last-child(2) {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 20px;
+            margin-top: 15px;
+        }
+
+        .detailed .content .title .tit_con {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 25px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+
+        .detailed .content .title .tit_con .num {
+            float: left;
+        }
+    </style>
+</head>
+
+<body body class="A4">
+    <section class="index sheet">
+        <img src="./img/picture01.png" style="margin-top: -10px">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span>刘坚</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span>女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span>18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span>2019年3月28日</span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/picture06.png" style="height: 10%;margin-top: -2mm;">
+    </section>
+
+    <section class="explain sheet">
+        <img src="./img/picture02.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="con_top">
+                    <div class="char">测验说明</div>
+                    <div class="jiao"></div><br><br><br><br>
+                    <p>心理健康检查是格略集团心理管理研究院联合中国心理卫生协会职业心理 健康促进专业委员会，根据员工心理健康的典型行为样本进行开发和编制。测验
+                        从17个方面对心理发展状况进行普查，分别为躯体反应、回避行为、幻想行为、 自责行为、 强迫行为、偏执心理、嫉妒心理、人际适应、孤独感受、依赖心理、
+                        猜疑心理、焦虑情绪、冲动控制、抑郁倾向、环境适应、恐惧心理、身心同一。</p>
+                    <table>
+                        <tr style="background-color: #EDEDED;">
+                            <th>症状等级</th>
+                            <th>症状等级定性</th>
+                            <th>代表颜色</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>健康</td>
+                            <td style="background-color: #45CD7D;">绿色</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>健康</td>
+                            <td style="background-color: #3F88FF">蓝色</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>轻度</td>
+                            <td style="background-color: #FAE046;">黄色</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>中度</td>
+                            <td style="background-color: #FCBB4D;">橙色</td>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td>预警</td>
+                            <td style="background-color: #EC5656;">红色</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="con_bom">
+                    <div class="char">报告阅读建议</div>
+                    <div class="jiao"></div><br><br><br><br>
+                    <p>1 . 测验结果只能作为员工了解和发展自己及组织整体分析和员工帮助之用。 </p>
+                    <p>2 . 本测验仅作为员工心理发展状态的普查，不是心理障碍的医学诊断工具。 </p>
+                    <p>3 . 本测验不是个体心理状态的唯一工具，需要借助专家或其他方法进行综合 </p>
+                    <p>4 . 本测验的效度受很多因素的影响</p>
+                    <div class="attention" style="overflow: hidden;margin-left: 25px;">
+                        <p class="yuandian"></p>
+                        <p class="wenzi">答题时是否存在内外部的干扰因素。</p>
+
+                        <p class="yuandian"></p>
+                        <p class="wenzi">答题时有意无意地回避了真实情况。</p>
+
+                        <p class="yuandian"></p>
+                        <p class="wenzi">理解是否与测验指标的内涵一致。</p>
+                    </div>
+                    <p>5 . 谨慎解读测评报告，不要误读、扭曲或夸大，必要时需要借助专业人士。 </p>
+                    <p>6 . 测验严格遵循心理测量的道德准则，保护员工隐私，尊重员工发展权益。 </p>
+                    <p>7 . 本报告的专业解释由格略集团心理管理研究院执行，如需帮助请联系我们。</p>
+                    <pre>联系电话: 021-63531261            电子邮箱: gelue@gelue.com</pre>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture07.png" alt="">
+    </section>
+
+    <section class="histogram sheet">
+        <img src="./img/picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <pre>作答时间：17分53秒        回答较为真实，没有掩饰，结果可以相信</pre>
+                <div class="char">测评结果</div>
+                <div class="jiao"></div><br><br><br><br><br>
+                <h1>1. 总体描述性分析数据图</h1>
+                <!-- <div class="graph">
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+
+                    <div class="num_list">
+                        <p>30</p>
+                        <p>25</p>
+                        <p>20</p>
+                        <p>15</p>
+                        <p>10</p>
+                        <p>5</p>
+                        <p>0</p>
+                    </div>
+
+                    <div class="data_list">
+                        <div class="qtfy">
+                            <p>8</p>
+                            <div class="data_col">asdasdf</div>
+                            <p>躯体反应</p>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div> -->
+                <div class="graph" id="graph">
+
+                </div>
+                <br><br>
+                <h1>2、典型特征</h1><br>
+                <div class="trait yellow">
+                    <span>黄色指标:</span>
+                    <p>暂无</p>
+                </div>
+
+                <div class="trait orger">
+                    <span>橙色指标:</span>
+                    <p>暂无</p>
+                </div>
+
+                <div class="trait red">
+                    <span>红色指标:</span>
+                    <p>暂无</p>
+                </div>
+
+                <!-- <div class="trait yellow">
+                    <span>黄色指标:</span>
+                    <p>暂无</p>
+                </div>
+
+                <div class="trait yellow">
+                    <span>黄色指标:</span>
+                    <p>暂无</p>
+                </div>
+
+                <div class="trait yellow">
+                    <span>黄色指标:</span>
+                    <p>暂无</p>
+                </div> -->
+            </div>
+        </div>
+        <img src="./img/picture07(1).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char">详细解释</div>
+                <div class="jiao"></div><br><br><br><br><br>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>躯体反应</p>
+                    <p>一般来说，您具有良好的身体状态，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">精力充沛，具有较强的工作兴趣和较高的工作效率</p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">极少产生持久而强烈的身体疼痛感 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">即使产生身体疲劳感，也能通过休息很快恢复</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>回避行为</p>
+                    <p>一般来说，您能够积极面对困难，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">能够关注既定目标的完成，寻求解决办法 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">能够面对困难、挫折和失败，少有回避倾向 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">较少受到失望、沮丧等负面情绪的影响</p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">不会过分强调任务的困难和不可完成性</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>幻想行为</p>
+                    <p>一般说来，您是一位理性的、现实的人，能够正确的面对和应付困难，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">通常是现实主义者，不喜欢幻想，对现实持有清醒的认识 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">能够正面的看待问题，并专注于问题解决 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">能理智地应付困难</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>自责行为</p>
+                    <p>一般来说，您在遇到挫折和困难时有较强的信心，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">能正确地认识自己，正面对待自己的经历 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">能够客观的评估自己的能力与不足 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">信任自己解决问题的能力，不轻易动摇</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture07(2).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>强迫行为</p>
+                    <p>一般说来，您非常理性，从不为毫无根据的想法而烦恼，也不会反复去做毫无意 义的事情，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">不是充满疑虑的人，不会时刻担心细菌、病毒的侵入，也不会反复检查煤气 管道、电源开关等物件</p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">可以有效地控制自己的思维活动，随时可以把那些奇怪的、荒谬的念头抛开 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">行为举止很正常，没有任何需要反复进行否则就会感到焦虑的行为习惯或癖 好</p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">对生活和工作的掌控能力比较强，不会夸大犯错的后果，也不会因此惴惴不 安</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>偏执心理</p>
+                    <p>一般来说，您是一位通情达理、灵活变通的人，有可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">乐于信任别人，极少怀疑别人的动机和愿望 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">胸宽广，很少记恨别人，能够坦然宽容接受别人的过错 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">对自己有清晰的认识，能客观评估自己的能力</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>嫉妒心理</p>
+                    <p>一般来说，您是一位心胸豁达，心态平和的人，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">对自己有清晰的认识，客观理性的评估自己的能力 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">能够正确看待别人的长处和优点，并能由衷赞美别人的成绩和能力 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">往往表现出热情、喜悦、生活充满动力，具有较高的工作效率 </p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">极好的适应能力，能够坦然面对现实环境，以客观的态度面对现实，冷静地 判断事实，理性地处理问题，并形成积极应变的心态</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>人际适应</p>
+                    <p>一般说来，您是一个外向、热情、善解人意的人，不会在细节上纠缠不清，也不 会自我封闭，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">心胸宽广，能够分辨别人说话的意图，对无心之言、玩笑话不会放在心上， 更不会生气、愤恨 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">非常自信，喜欢表达和展现自己，能够坦然面对别人的拒绝、冷落和负面评 价您待人宽厚，信任他人，不会仅仅从个人立场出发考虑问题 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">心理能量很强大，乐观大方，能够从容、坦荡地与他人交往 </p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">经常参加各种社交活动，乐意和别人打交道，并能以淡定的心态处理人际冲 突或矛盾</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture07(3).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>孤独感受</p>
+                    <p>一般说来，您具有强大的、持久的精神支持，如亲情、友谊、爱情、信仰、兴趣 等，关心与爱护您的人很多，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">能够以愉悦的方式消磨自己的空闲时间，而不会有寂寞、无所事事的感受 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">在遇到困难或者心情不好的时候，总是会有人帮助和安慰，有温暖、安心的 感受 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">通常具备良好的人际关系，可以得到较多社会资源和支持 好</p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">一个成熟、乐观的人，能积极应对竞争和压力、忍受拥挤和忙碌，以平和、 恬淡的心态面对生活和工作</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>依赖心理</p>
+                    <p>一般来说，您是一位通情达理、灵活变通的人，有可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">乐于信任别人，极少怀疑别人的动机和愿望 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">胸宽广，很少记恨别人，能够坦然宽容接受别人的过错 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">对自己有清晰的认识，能客观评估自己的能力</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>嫉妒心理</p>
+                    <p>一般来说，您是一位心胸豁达，心态平和的人，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">对自己有清晰的认识，客观理性的评估自己的能力 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">能够正确看待别人的长处和优点，并能由衷赞美别人的成绩和能力 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">往往表现出热情、喜悦、生活充满动力，具有较高的工作效率 </p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">极好的适应能力，能够坦然面对现实环境，以客观的态度面对现实，冷静地 判断事实，理性地处理问题，并形成积极应变的心态</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>猜疑心理</p>
+                    <p>一般说来，您是一位友善、合作的人，愿意相信别人，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">对他人的看法比较正面、积极，相信人性的善良，愿与他人协作</p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">信任别人，愿意和别人建立关系，没有充分的证据，极少怀疑别人的动机 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">即使遇到不快，也能控制自己的情绪，而极少在语言和行为上攻击他人 </p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">比较坦率和豁达，很少记仇，不会将负面情绪带入以后的工作中</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture07(4).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>焦虑情绪</p>
+                    <p>一般说来，您是一位从容镇定、乐观豁达、心情愉悦的人，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">能坦然面对各种压力，并能巧妙地、高效地解决各种问题 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">对周围环境的掌控能力很强，对可能发生的事情有着准确的预期 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">性格比较随和，擅长交际，并可能喜欢在公众场合表现自己</p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">身体健康，没有受到疾病、疼痛、不适、衰弱的困扰 </p>
+
+                        <p class="num">5、</p>
+                        <p class="hanzi">心态很好，淡泊名利，极少有偏激的想法或看法，对人对事都比较宽容 </p>
+
+                        <p class="num">6、</p>
+                        <p class="hanzi">往往按照惯常的方式做事，遵循既有的规则，时间管理能力也比较好，很少 拖沓</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>冲动控制</p>
+                    <p>一般来说，您是一位成熟理智而沉着冷静的人，待人比较友善，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">情绪状态非常稳定，极少出现突然的暴怒，情绪控制能力也较强 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">行为比较慎重，倾向于规避风险，做事情顾及后果，很少冲动 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">语言和思维能力正常，遇事能够冷静对待，并能很好的控制和调节语言举止 </p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">头脑冷静，能够平心静气、毫无偏见地分析道理而不感情用事</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>抑郁倾向</p>
+                    <p>一般说来，您是一位开朗、愉悦、乐观的人，精神比较饱满，能以积极、平和的 心态面对日常的工作与生活，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">极少情绪低落、悲观失望，而往往意气风发、笑容满面 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">觉得生活很充实，有很多有趣的、值得做的事情，如交友、培养兴趣爱好等 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">思维和语言功能正常，反应灵敏</p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">自信，并在一定程度上悦纳自己，觉得自己是一个有用的、有价值的人 </p>
+
+                        <p class="num">5、</p>
+                        <p class="hanzi">身体健康，饮食睡眠状况良好，精力也比较充沛 </p>
+
+                        <p class="num">6、</p>
+                        <p class="hanzi">喜欢与别人交往，人际关系良好，态度宽容、随和，经常给人阳光、活泼的 感觉</p>
+
+                        <p class="num">7、</p>
+                        <p class="hanzi">能坦然接受社会现实，即使遭遇挫折和打击，也能勇敢地面对</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture07(4).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>环境适应</p>
+                    <p>一般说来，您的社会适应能力很强，能根据环境的变化、自身的发展来调整个人 的需求，以积极的态度面对工作和生活中的困难，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">具备良好沟通技巧，能迅速和周围的人建立关系，甚至左右逢源、讨人喜欢 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">非常理性，制定的计划切合实际，操作性强，容易被别人接受 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">与环境保持适宜的接触，但不是只注重眼前利益的人 </p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">能够忍受一时的挫折和痛苦，能延迟满足 </p>
+
+                        <p class="num">5、</p>
+                        <p class="hanzi">价值观与社会主流价值观趋同或者兼容，能对个人需求做适当的追求 </p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>恐惧心理</p>
+                    <p>一般说来，您是一位胆大的、泰然自若的人，遇事不慌不乱，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">在社交场合表现自如，即使有人盯着你看，也不会觉得不自在 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">敢于在公众场合表达，甚至喜欢在大庭广众之下演讲或者表演 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">没有什么场所或空间让您觉得害怕，可以镇定地出入各种场合 </p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">没有任何“怕得要命”的东西，即使受了惊吓，也会很快恢复过来</p>
+
+                        <p class="num">5、</p>
+                        <p class="hanzi">身体健康，极少出现胸闷、呼吸困难、晕厥，对生活和工作的把控能力很强</p>
+                    </div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>身心同一</p>
+                    <p>一般说来，您是一位现实主义者，有责任心，可信赖，可能的表现为: </p>
+                    <div class="tit_con">
+                        <p class="num">1、</p>
+                        <p class="hanzi">认知、意志、运动等方面都很正常，没有出现病变或互不协调的情况 </p>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi">情绪比较稳定，有同情心，往往比较热情，注重有距离的交往 </p>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi">认同权威，尊敬真正有学问和能力的人，比较顺从</p>
+
+                        <p class="num">4、</p>
+                        <p class="hanzi">人际关系比较好，待人随和，比较合群 </p>
+
+                        <p class="num">5、</p>
+                        <p class="hanzi">人际关系比较好，待人随和，比较合群 </p>
+
+                        <p class="num">6、</p>
+                        <p class="hanzi">有兴趣参加一些社会活动，并在工作中保持一定的主动性 </p>
+
+                        <p class="num">7、</p>
+                        <p class="hanzi">偶尔显得刻板，兴趣单调，缺乏想象力</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture07(4).png" alt="">
+    </section>
+
+    <section class="footer sheet">
+        <img src="./img/picture05.png" alt="">
+    </section>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
+<script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('graph'));
+    // 指定图表的配置项和数据
+    option = {
+        color: ['#3398DB'],
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['躯体反应', '回避行为', '幻想行为', '自责行为', '强迫行为', '偏执心理', '嫉妒心理', '人际适应', '孤独感受', '依赖心理', '猜疑心理', '焦虑心理', '冲动控制', '阴郁倾向', '环境适应', '恐惧心理', '身心同一'],
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLabel: {
+                    formatter: function (value) {
+                        return value.split("").join("\n")
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false,
+                },
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                min: 0,
+                max: 30,
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false,
+                },
+            }
+        ],
+        visualMap: {//区间内控制显示颜色
+                show: false,
+                dimension: 1,
+                pieces: [
+                    {gte: 0,  lte: 4, color: '#45CD7D'},
+                    {get: 6,  lte: 10,color: '#3F88FF'},
+                    {get: 11, lte: 15,color: '#FCBB4D'},
+                    {get: 16, lte: 20,color: '#FAE046'},
+                    {get: 21, lte: 30,color: '#EC5656'}
+                ],
+                outOfRange: {
+                    color: 'skyblue'
+                }
+            },
+        series: [
+            {
+                name: '直接访问',
+                type: 'bar',
+                barWidth: '60%',
+                data: [4, 7, 13, 10, 17, 12, 6, 7, 14, 10, 11, 7, 6, 10, 14, 9, 30],
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true, //开启显示
+                            position: 'top', //在上方显示
+                            textStyle: { //数值样式
+                                color: 'black',
+                                fontSize: 16
+                            }
+                        },
+
+                        // color: function (params) {
+                        //     let colorList = [
+                        //         '#45CD7D', '#3F88FF', '#FAE046', '#FCBB4D', '#EC5656',
+                        //     ];
+
+                        //     // console.log(typeof(params))
+                        //     var dataS = []
+                        //     dataS.push(params.data)
+                        //     // console.log(dataS)
+                            
+                        //     // console.log(dataS)
+                        //     $.each(dataS,function(key,value) {
+                        //         console.log(value)
+                        //         if(value >= 10) {
+                        //             // console.log(1)
+                        //             return 'red'
+                        //             // console.log(2)
+                        //         }
+                        //     })
+
+                        // },
+
+                    }
+                },
+
+            }
+        ],
+        tooltip: {
+            trigger: 'item',
+            show: false,
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+            //this.people_result_id= this.GetQueryString('people_result_id');
+
+            // $.ajax({
+            //     url:'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
+            //     // url:'/user',
+            //     type:'POST',
+            //     data:{
+            //         people_result_id:633748,
+            //         report_type_id:'NewBehavioralStyle'
+            //     },
+            //     dataType:'json',
+            //     success:function(res){
+
+            //         let data =res;
+            //         console.log(res)
+            //         if(data.code==0){
+            //             let result = data.detail.report_data.msg;  
+            //             //_this.AddDom(result);
+            //         }else{
+            //             alert('请求数据有误')
+            //         }
+            //     }
+            // })
+</script>
