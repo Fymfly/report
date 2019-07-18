@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>职业心理健康</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+    <link rel="stylesheet" href="./css/react.css">
+    <style>
+        @font-face {
+            font-family: "SourceHanSansCN-Bold";
+            src: url("./typeface/SourceHanSansCN-Bold.woff2") format("woff2"),
+                url("./typeface/SourceHanSansCN-Bold.woff") format("woff"),
+                url("./typeface/SourceHanSansCN-Bold.ttf") format("truetype"),
+                url("./typeface/SourceHanSansCN-Bold.eot") format("embedded-opentype"),
+                url("./typeface/SourceHanSansCN-Bold.svg") format("svg");
+        }
+
+        .contanier {
+            width: 100%;
+        }
+
+        section {
+            width: 100%;
+            height: '';
+            box-sizing: border-box;
+            font-size: 8px;
+            font-family: 'SourceHanSansCN-Bold';
+
+        }
+
+        section>img {
+            width: 100%;
+        }
+
+
+        .index {
+            padding: 10px 0;
+        }
+
+        .index .userInfo {
+            height: 18.5%;
+            background: linear-gradient(to right, #e4e2e3, white);
+            width: 95%;
+            margin: -2px auto;
+        }
+
+        .index .userInfo ul {
+            overflow: hidden;
+            padding-top: 3.5rem;
+        }
+
+        .index .userInfo ul li {
+            float: left;
+            text-align: left;
+            font-size: 16px;
+            text-indent: 25px;
+            width: 35%;
+            color: #EF7E50;
+            font-family: "SourceHanSansCN-Bold";
+            line-height: 2rem;
+            font-weight: bold;
+        }
+
+
+        .explain .border {
+            width: 100%;
+            height: 85.2%;
+            margin-top: -2px;
+            padding-top: 35px;
+        }
+
+        .explain .border .content {
+            height: 100vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+
+        .explain .content .char {
+            background-color: #EF7E50;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+            clear: both;
+            margin-bottom: 5px;
+        }
+
+        .explain .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #EF7E50;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .explain .content .con_top {
+            height: 55%;
+            width: 100%;
+        }
+
+        .explain .content .con_top>p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 25px;
+        }
+
+        .explain .content .con_top>table {
+            width: 100%;
+            height: 52%;
+            border: 1px solid #E8E8E8;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 16px;
+            font-family: PingFangSC-Medium;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 21px;
+        }
+
+        .explain .content .con_top>table tr {
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .explain .con_top>table tr td,
+        th {
+            border-right: 1px solid #e8e8e8;
+        }
+
+        .explain .content .con_bom {
+            height: 40%;
+            width: 100%;
+        }
+
+        .explain .content .con_bom p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 25px;
+        }
+
+        .explain .content .con_bom .attention .yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #FD4A02;
+            float: left;
+        }
+
+        .explain .content .con_bom .attention .wenzi {
+            margin-left: 13px;
+            margin-top: -9px;
+            line-height: 35px;
+        }
+
+        .explain .content .con_bom>pre {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 21px;
+            margin-top: 20px;
+        }
+
+
+
+        .histogram .border {
+            width: 100%;
+            height: 85.3%;
+            margin-top: -2px;
+            padding-top: 35px;
+        }
+
+        .histogram .border .content {
+            height: 100vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .histogram .content>pre {
+            font-size: 15px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+
+        .histogram .content .char {
+            background-color: #EF7E50;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+            clear: both;
+            margin-bottom: 5px;
+        }
+
+        .histogram .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #EF7E50;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .histogram .content h1 {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 21px;
+        }
+
+        .histogram .content .graph {
+            width: 90%;
+            height: 45%;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .histogram .content .graph .gra_line {
+            width: 92%;
+            height: 1px;
+            background-color: #EBECF0;
+            margin-bottom: 55px;
+            margin-left: 50px;
+        }
+
+        .histogram .content .graph .num_list {
+            position: absolute;
+            top: -30px;
+            left: 15px;
+            background-color: rebeccapurple;
+            height: 100%;
+            font-size: 12px;
+            font-family: HelveticaNeue;
+            color: rgba(102, 102, 102, 1);
+            line-height: 57px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .histogram .content .graph .data_list {
+            width: 92%;
+            height: 18%;
+            background-color: skyblue;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .histogram .content .yellow {
+            background-color: #fdf5c7;
+            color: rgba(245, 197, 18, 1);
+        }
+
+        .histogram .content .orger {
+            background-color: #fee7c9;
+            color: #FCAF4D;
+        }
+
+        .histogram .content .red {
+            background-color: #f9cccc;
+            color: #EC5656;
+        }
+
+        .histogram .content .trait {
+            width: 100%;
+            min-height: 6%;
+            /* height: 6%; */
+            margin-bottom: 20px;
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .histogram .content .trait span {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            line-height: 4em;
+            margin-left: 20px;
+        }
+
+        .histogram .content .trait>p {
+            display: inline-block;
+            margin-left: 18px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(175, 175, 175, 1);
+            line-height: 21px;
+        }
+
+        .histogram .content .trait b {
+            color: #684d4d;
+            font-size: 14px;
+            margin-right: 11px;
+            margin-left: 18px;
+            line-height: 2em;
+        }
+
+        .histogram .content .trait .dataD {
+            width: 88%;
+            float: right;
+        }
+
+
+        .detailed .border {
+            width: 100%;
+            height: 85.3%;
+            margin-top: -2px;
+            padding-top: 35px;
+        }
+
+        .detailed .border .content {
+            height: 100vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .detailed .content .char {
+            background-color: #EF7E50;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+            clear: both;
+            margin-bottom: 5px;
+        }
+
+        .detailed .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #EF7E50;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .detailed .content .title {
+            overflow: hidden;
+            margin-bottom: 35px;
+        }
+
+        .detailed .content .title .sanjiao {
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-left: 20px solid #EF7E4F;
+            border-bottom: 12px solid transparent;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .detailed .content .title>p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(239, 126, 80, 1);
+            line-height: 24px;
+        }
+
+        .detailed .content .title ul {
+            list-style: decimal !important;
+            font-size: 16px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+            margin-top: 15px;
+        }
+
+        .detailed .content .title ul li {
+            margin-left: 18px;
+        }
+
+        .detailed .content .title ul li:nth-child(1) {
+            margin-left: 16px;
+        }
+    </style>
+</head>
+
+<body body class="A4">
+    <section class="index sheet">
+        <img src="./img/PPSY2019_picture01.png" style="margin-top: -10px">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span id="Name">刘坚</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span id="Gender">女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span id="Age">18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span id="TestTime">2019年3月28日</span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/PPSY2019_picture06.png" style="height: 10%;margin-top: -2mm;">
+    </section>
+
+    <section class="explain sheet">
+        <img src="./img/PPSY2019_picture02.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="con_top">
+                    <div class="char">测验说明</div>
+                    <div class="jiao"></div><br><br><br><br>
+                    <p>心理健康检查是格略集团心理管理研究院联合中国心理卫生协会职业心理 健康促进专业委员会，根据员工心理健康的典型行为样本进行开发和编制。测验
+                        从17个方面对心理发展状况进行普查，分别为躯体反应、回避行为、幻想行为、 自责行为、 强迫行为、偏执心理、嫉妒心理、人际适应、孤独感受、依赖心理、
+                        猜疑心理、焦虑情绪、冲动控制、抑郁倾向、环境适应、恐惧心理、身心同一。</p>
+                    <table>
+                        <tr style="background-color: #EDEDED;">
+                            <th>症状等级</th>
+                            <th>症状等级定性</th>
+                            <th>代表颜色</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>健康</td>
+                            <td style="background-color: #45CD7D;">绿色</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>健康</td>
+                            <td style="background-color: #3F88FF">蓝色</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>轻度</td>
+                            <td style="background-color: #FAE046;">黄色</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>中度</td>
+                            <td style="background-color: #FCBB4D;">橙色</td>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td>预警</td>
+                            <td style="background-color: #EC5656;">红色</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="con_bom">
+                    <div class="char">报告阅读建议</div>
+                    <div class="jiao"></div><br><br><br><br>
+                    <p>1 . 测验结果只能作为员工了解和发展自己及组织整体分析和员工帮助之用。 </p>
+                    <p>2 . 本测验仅作为员工心理发展状态的普查，不是心理障碍的医学诊断工具。 </p>
+                    <p>3 . 本测验不是个体心理状态的唯一工具，需要借助专家或其他方法进行综合 </p>
+                    <p>4 . 本测验的效度受很多因素的影响</p>
+                    <div class="attention" style="overflow: hidden;margin-left: 25px;">
+                        <p class="yuandian"></p>
+                        <p class="wenzi">答题时是否存在内外部的干扰因素。</p>
+
+                        <p class="yuandian"></p>
+                        <p class="wenzi">答题时有意无意地回避了真实情况。</p>
+
+                        <p class="yuandian"></p>
+                        <p class="wenzi">理解是否与测验指标的内涵一致。</p>
+                    </div>
+                    <p>5 . 谨慎解读测评报告，不要误读、扭曲或夸大，必要时需要借助专业人士。 </p>
+                    <p>6 . 测验严格遵循心理测量的道德准则，保护员工隐私，尊重员工发展权益。 </p>
+                    <p>7 . 本报告的专业解释由格略集团心理管理研究院执行，如需帮助请联系我们。</p>
+                    <pre>联系电话: 021-63531261            电子邮箱: gelue@gelue.com</pre>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07.png" alt="">
+    </section>
+
+    <section class="histogram sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <pre>作答时间：<i id="CompletionTime" style="font-weight: bold">17分53秒</i>         <i id="Validity" style="font-weight: bold">回答较为真实，没有掩饰，结果可以相信</i></pre>
+                <div class="char">测评结果</div>
+                <div class="jiao"></div><br><br><br><br><br>
+                <h1>1. 总体描述性分析数据图</h1>
+                <!-- <div class="graph">
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+                    <p class="gra_line"></p>
+
+                    <div class="num_list">
+                        <p>30</p>
+                        <p>25</p>
+                        <p>20</p>
+                        <p>15</p>
+                        <p>10</p>
+                        <p>5</p>
+                        <p>0</p>
+                    </div>
+
+                    <div class="data_list">
+                        <div class="qtfy">
+                            <p>8</p>
+                            <div class="data_col">asdasdf</div>
+                            <p>躯体反应</p>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div> -->
+                <div class="graph" id="graph">
+
+                </div>
+                <br><br>
+                <h1>2、典型特征</h1><br>
+                <div class="trait yellow" id="yellow">
+                    <span>黄色指标:</span>
+                    <!-- <div class="dataD">
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+    
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                        <b>躯体反应</b>
+                    </div> -->
+                    <!-- <p>暂无</p> -->
+                </div>
+
+                <div class="trait orger" id="orger">
+                    <span>橙色指标:</span>
+                    <!-- <p>暂无</p> -->
+                </div>
+
+                <div class="trait red" id="red">
+                    <span>红色指标:</span>
+                    <!-- <div class="dataD">
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b>
+                </div> -->
+                    <!-- <p>暂无</p>
+                    <b>躯体反应</b>
+                    <b>躯体反应</b> -->
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(1).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char">详细解释</div>
+                <div class="jiao"></div><br><br><br><br><br>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>躯体反应</p>
+                    <div id="qtfy">
+                        <ul>一般来说，您具有良好的身体状态，可能的表现为:
+                            <li>精力充沛，具有较强的工作兴趣和较高的工作效率</li>
+                            <li>极少产生持久而强烈的身体疼痛感</li>
+                            <li>即使产生身体疲劳感，也能通过休息很快恢复</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>回避行为</p>
+                    <div id="hbxw"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>幻想行为</p>
+                    <div id="hxxw"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>自责行为</p>
+                    <div id="zzxw" class="tit_con"></div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(2).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>强迫行为</p>
+                    <div id="qpxw"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>偏执心理</p>
+                    <div id="pzxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>嫉妒心理</p>
+                    <div id="jdxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>人际适应</p>
+                    <div id="rjsy"></div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(3).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>孤独感受</p>
+                    <div id="gdgs"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>依赖心理</p>
+                    <div id="ylxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>猜疑心理</p>
+                    <div id="cyxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>焦虑情绪</p>
+                    <div id="jlxl"></div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(4).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>冲动控制</p>
+                    <div id="cdkz"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>抑郁倾向</p>
+                    <div id="yyqx"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>环境适应</p>
+                    <div id="hjsy"></div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(4).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>恐惧心理</p>
+                    <div id="kjxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>身心同一</p>
+                    <div id="sxty""></div>
+                </div>
+            </div>
+        </div>
+        <img src=" ./img/PPSY2019_picture07(4).png" alt="">
+    </section>
+
+    <section class="footer sheet">
+        <img src="./img/PPSY2019_picture05.png" alt="">
+    </section>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
+<script>
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+        var context = "";
+        if (r != null)
+            context = r[2];
+        reg = null;
+        r = null;
+        return context == null || context == "" || context == "undefined" ? "" : context;
+    }
+
+    let people_result_id = this.GetQueryString('people_result_id');
+
+    $.ajax({
+        url: 'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
+        type: 'POST',
+        data: {
+            // people_result_id: 11183,
+            people_result_id: people_result_id,
+            report_type_id: 'PPSY2019'
+        },
+        dataType: 'json',
+        success: function (res) {
+            let data = res;
+            // console.log(res) 
+            if (data.code == 0) {
+                let result = data.detail.report_data.msg;
+                console.log(result)
+                AddDom(result)
+            } else {
+                alert('请求数据有误')
+            }
+        }
+    })
+
+
+    function AddDom(data) {
+        $('#Name').text(data.Name)
+        $('#Gender').text(data.Gender)
+        $('#Age').text(data.Age)
+        $('#TestTime').text(data.TestTime)
+        $('#CompletionTime').text(data.CompletionTime)
+        $('#Validity').text(data.Validity)
+
+
+        // 典型特征
+        if (data.ranks[1].length == 0) {
+            let yellow = $('#yellow');
+            let traitp1 = $('<p>暂无</p>')
+            yellow.append(traitp1)
+        } else {
+            let yellow = $('#yellow');
+            let divP = $('<div></div>')
+            yellow.append(divP)
+            $.each(data.ranks[1], function (key, val) {
+
+                let traitb1 = $('<p>' + val + '</p>')
+                divP.append(traitb1)
+            })
+        }
+
+        if (data.ranks[2].length == 0) {
+            let orger = $('#orger');
+            let traitp2 = $('<p>暂无</p>')
+            orger.append(traitp2)
+        } else {
+            let orger = $('#orger');
+            let divP = $('<div class="dataD"></div>')
+            orger.append(divP)
+            $.each(data.ranks[2], function (key, val) {
+
+                let traitb2 = $('<b>' + val + '</b>')
+                divP.append(traitb2)
+            })
+        }
+
+        if (data.ranks[3].length == 0) {
+            let red = $('#red');
+            let traitp3 = $('<p>暂无</p>')
+            red.append(traitp3)
+        } else {
+            let red = $('#red');
+            let divP = $('<div class="dataD"></div>')
+            red.append(divP)
+            $.each(data.ranks[3], function (key, val) {
+
+                let traitb3 = $('<b>' + val + '</b>')
+                divP.append(traitb3)
+            })
+        }
+
+
+
+        // 详细解释
+        // console.log(data.scores['躯体反应'].desc)
+        $('#qtfy').html(data.scores['躯体反应'].desc)
+        $('#hbxw').html(data.scores['回避行为'].desc)
+        $('#hxxw').html(data.scores['幻想行为'].desc)
+        $('#zzxw').html(data.scores['自责行为'].desc)
+        $('#qpxw').html(data.scores['强迫行为'].desc)
+        $('#pzxl').html(data.scores['偏执心理'].desc)
+        $('#jdxl').html(data.scores['嫉妒心理'].desc)
+        $('#rjsy').html(data.scores['人际适应'].desc)
+        $('#gdgs').html(data.scores['孤独感受'].desc)
+        $('#ylxl').html(data.scores['依赖心理'].desc)
+        $('#cyxl').html(data.scores['猜疑心理'].desc)
+        $('#jlxl').html(data.scores['焦虑情绪'].desc)
+        $('#cdkz').html(data.scores['冲动控制'].desc)
+        $('#yyqx').html(data.scores['抑郁倾向'].desc)
+        $('#hjsy').html(data.scores['环境适应'].desc)
+        $('#kjxl').html(data.scores['恐惧心理'].desc)
+        $('#sxty').html(data.scores['身心同一'].desc)
+
+
+        let option = {
+            dataName: [],
+            dataPt: []
+        }
+        let dataO = data.scores
+        console.log(dataO)
+        // dataO.remove('社会称许性')
+        //删除属性
+        delete dataO['社会称许性'];
+        // dataO.splice(11,1)
+        console.log(dataO)
+        $.each(data.scores, function (key, val) {
+            console.log(val.pt)
+
+            option.dataName.push(key)
+            option.dataPt.push(val.pt)
+            // delete.数组[数组下标];
+
+        })
+
+
+        AddEchart(option)
+
+    }
+
+
+    function AddEchart(data) {
+
+        console.log(data)
+        let arr = data.dataPt;
+        console.log(arr)
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('graph'));
+        // 指定图表的配置项和数据
+        option = {
+            color: ['#3398DB'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: data.dataName,
+                    axisTick: {
+                        alignWithLabel: true
+                    },
+                    axisLabel: {
+                        formatter: function (value) {
+                            return value.split("").join("\n")
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLine: {
+                        show: false,
+                    },
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    min: 0,
+                    max: 30,
+                    axisTick: {
+                        show: false
+                    },
+                    axisLine: {
+                        show: false,
+                    },
+                }
+            ],
+
+            series: [
+                {
+                    name: '直接访问',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: arr,
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: true, //开启显示
+                                position: 'top', //在上方显示
+                                textStyle: { //数值样式
+                                    color: 'black',
+                                    fontSize: 16
+                                }
+                            },
+                            color: function (params) {
+                                var index_num = params.value;
+                                for (var i = 0; i < arr.length; i++) {
+
+                                    //判断数据
+
+                                    if (index_num <= 30 && index_num >= 26) {
+                                        return '#ec5656'
+                                    } else if (index_num <= 25 && index_num >= 21) {
+                                        return '#fcbb4d'
+                                    } else if (index_num <= 20 && index_num >= 16) {
+                                        return '#fae046'
+                                    } else if (index_num <= 15 && index_num >= 11) {
+                                        return '#3f88ff'
+                                    } else if (index_num <= 10 && index_num >= 0) {
+                                        return '#45cd7d'
+                                    }
+
+
+                                }
+                            }
+
+                        }
+                    },
+
+                }
+            ],
+            tooltip: {
+                trigger: 'item',
+                show: false,
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    }
+</script>
