@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工作价值观</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+    <link rel="stylesheet" href="./css/react.css">
+    <link rel="stylesheet" href="./css/WorkValues.css">
+</head>
+
+<body body class="A4">
+    <section class="index sheet">
+        <img src="./img/picture01.png" style="margin-top: -10px">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span>刘坚</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span>女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span>18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span>2019年3月28日</span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/picture06.png" style="height: 10%;margin-top: -2mm;">
+    </section>
+
+    <section class="Introduction sheet">
+        <img src="./img/picture02.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char">报告介绍</div>
+                <div class="jiao"></div><br><br><br><br><br>
+                <div class="intr">
+                    <p class="yuandian"></p>
+                    <p class="hanzi">本报告基于%name%所完成的工作价值观问卷，探索在工作环境中可能对其有一定影响的激励因素，并具体分析了这些因素在多大程度上对%name%选择工作起到积极或消极作用。
+                    </p>
+
+                    <p class="yuandian"></p>
+                    <p class="hanzi">测评结果的解释需要一定的心理学专业技能，需同时考虑测评的具体情境并结合其他信息综合考虑。</p>
+
+                    <p class="yuandian"></p>
+                    <p class="hanzi">请勿仅根据本报告的内容对%name%下结论。 如对报告内容有任何疑问，请咨询具有心理测量背景的专业人士。</p>
+
+                    <p class="yuandian"></p>
+                    <p class="hanzi">本报告的准确程度很大一部分取决于%name%回答问题的真实性。</p>
+
+                    <p class="yuandian"></p>
+                    <p class="hanzi">报告有效期为12个月，如果在生活或工作中遇到重大变动，也需考虑重新完成此问卷。</p>
+                </div>
+
+
+                <div class="char">使用说明</div>
+                <div class="jiao"></div><br><br><br><br><br>
+                <div class="use">
+                    <p class="yuandian"></p>
+                    <p class="hanzi">测评结果的解释需要一定的心理学专业技能，需同时考虑测评的具体情境并结合其他信息综合考虑。 </p>
+
+                    <p class="yuandian"></p>
+                    <p class="hanzi">请勿仅根据本报告的内容对%name%下结论。</p>
+
+                    <p class="yuandian"></p>
+                    <p class="hanzi">如对报告内容有任何疑问，请咨询具有心理测量背景的专业人士。</p>
+
+                    <p class="yuandian"></p>
+                    <p class="hanzi">本报告的准确程度很大一部分取决于%name%回答问题的真实性。 </p>
+
+                    <p class="yuandian"></p>
+                    <p class="hanzi">报告有效期为12个月，如果在生活或工作中遇到重大变动，也需考虑重新完成此问卷。</p>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture07.png" alt="">
+    </section>
+
+    <section class="results sheet">
+        <img src="./img/picture021.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <p>%name%的正面激励因素和负面激励因素概括如下：</p>
+                <p>其中，在正面激励因素上的改变能够提升%name%的工作动力，而负面激励因素如果进一步恶化将 会降低%name%的工作动力。</p>
+                <div class="chart" id="chart"></div>
+                <p>一般而言，针对强正面激励因素或强负面激励因素进行管理会更有效。</p>
+                <div class="con_data">
+                    <div class="classify1 classify" style="background-color: #afe2d3;">
+                        <img src="./img/icon_01.png" alt="">
+                        <p style="color: #23A07B;font-weight: bold;">强激励因素</p>
+                        <div class="class_res ">
+                            <!-- <p class="zw" style="color: rgba(168, 168, 168, 1);">暂无</p>  -->
+                            <div class="data">
+                                <p class="res">挑战/成就</p>
+                                <p class="res">自主/独立</p>
+                                <p class="res">专业/技术</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="classify2 classify" style="background-color: #c2defa;">
+                        <img src="./img/icon_02.png" alt="">
+                        <p style="color: #3494F1;font-weight: bold;">一般激励性因素</p>
+                        <div class="class_res">
+                            <div class="data">
+                                <p class="res">变化/探索</p>
+                                <p class="res">认可/表现</p>
+                                <p class="res">地位/职位</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="classify3 classify" style="background-color: #fdddcc;">
+                        <img src="./img/icon_03.png" alt="">
+                        <p style="color: #FA8F57;font-weight: bold;">一般负激励性因素</p>
+                        <div class="class_res">
+                            <div class="data">
+                                <p class="res">社交/人际</p>
+                                <p class="res">归属/团队</p>
+                                <p class="res">经济/报酬</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="classify4 classify" style="background-color: #f9c3c3;">
+                        <img src="./img/icon_04.png" alt="">
+                        <p style="color: #E75554;font-weight: bold;">强负激励因素</p>
+                        <div class="class_res">
+                            <div class="data">
+                                <p class="res">安全/稳定</p>
+                                <p class="res">舒适/家庭</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture071.png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/picture023.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char qjlys">强激励因素</div>
+                <div class="jiao"></div><br><br><br><br><br>
+                <pre class="det_wd qjlys2">自我实现</pre>
+                <div class="det_con">
+                    <p class="det_zb"><i class="qjlys2">挑战/成就:</i> 乐于在工作生活中面对挑战，克服困难，适应竞争激烈的工作环境</p>
+                    <p class="det_tit">因素：</p>
+                    <p class="det_ys">乐于克服各种困难及挑战，总是试图做的比别人更好，与他人之间的竞争关系会激发更好的 工作表现</p>
+                    <p class="det_tit">建议：</p>
+                    <div class="adv">
+                        <p class="det_num">1、</p>
+                        <p class="det_wenzi">工作时间外，只在工作任务非常紧急的时候才联系他/她</p>
+
+                        <p class="det_num">2、</p>
+                        <p class="det_wenzi">在可调整的范围内，尽量为他/她提供舒适的工作环境 </p>
+
+                        <p class="det_num">3、</p>
+                        <p class="det_wenzi">避免为他/她安排过多的工作任务，尽量不要占用他/她的私人时间</p>
+
+                        <p class="det_num">4、</p>
+                        <p class="det_wenzi">向他/她说明组织需要的是完成工作任务以及绩效，而不是工作的时间长度</p>
+
+                        <p class="det_num">5、</p>
+                        <p class="det_wenzi">鼓励并帮助他/她做好工作生活两方面的时间安排</p>
+                    </div>
+                </div>
+
+                <div class="det_con">
+                    <p class="det_zb"><i class="qjlys2">自主/独立：</i> 希望按自己的方式、步调或想法去安排工作时间、地点和方式，不倾向于受到太多来自他人的监督和控制</p>
+                    <p class="det_tit">因素：</p>
+                    <p class="det_ys">希望以自己的方式工作，过度的监督会影响工作表现</p>
+                    <p class="det_tit">建议：</p>
+                    <div class="adv">
+                        <p class="det_num">1、</p>
+                        <p class="det_wenzi">在确保工作任务能够保质保量完成的基础上，允许他/她自行安排工作方式，如：在家办公等 </p>
+
+                        <p class="det_num">2、</p>
+                        <p class="det_wenzi">在确保工作结果的基础上，鼓励他/她在工作中尝试新的方式方法优化工作流程 </p>
+
+                        <p class="det_num">3、</p>
+                        <p class="det_wenzi">为他/她安排工作任务时，共同商讨确定工作目标和时间节点，允许他/她自主安排工作进度 </p>
+
+                        <p class="det_num">4、</p>
+                        <p class="det_wenzi">在能力范围内，为他/她提供自由、宽松的工作氛围</p>
+                    </div>
+                </div>
+
+                <div class="det_con">
+                    <p class="det_zb"><i class="qjlys2">专业/技术：</i> 追求在技术或专业领域的成长和提高，倾向于专业或技术性的工作岗位和内容</p>
+                    <p class="det_tit">因素：</p>
+                    <p class="det_ys">对专业或技术导向的工作感兴趣，关注工作中提供的学习新知识或技能的机会</p>
+                    <p class="det_tit">建议：</p>
+                    <div class="adv">
+                        <p class="det_num">1、</p>
+                        <p class="det_wenzi">关注他/她工作内容的专业性，多为他/她安排专业性上有挑战的工作任务</p>
+
+                        <p class="det_num">2、</p>
+                        <p class="det_wenzi">为他/她专业性的提高提供平台和资源支持</p>
+
+                        <p class="det_num">3、</p>
+                        <p class="det_wenzi">通过他/她完成任务是否符合专业标准来评价他/她的工作表现</p>
+
+                        <p class="det_num">4、</p>
+                        <p class="det_wenzi">重视专业人才，鼓励他/她在专业领域上精益求精，不断进步"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture072.png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/picture023.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char2">一般激励性因素</div>
+                <div class="jiao2"></div><br><br><br><br><br>
+                <pre class="det_wd ybjlxys2">认知与审美</pre>
+                <div class="det_con">
+                    <p class="det_zb"><i class="ybjlxys2">变化/探索：</i> 希望每天都能处理全新的事务，适应变化的环境，经常尝试新的方法</p>
+                    <p class="det_tit">因素：</p>
+                    <p class="det_ys">希望每一天的工作都是在解决全新的问题，对枯燥重复的工作内容感到厌倦</p>
+                    <p class="det_tit">建议：</p>
+                    <div class="adv">
+                        <p class="det_num">1、</p>
+                        <p class="det_wenzi">为他/她安排需要多部门合作的工作任务 </p>
+
+                        <p class="det_num">2、</p>
+                        <p class="det_wenzi">避免让他/她承担过多重复性、枯燥的工作 </p>
+
+                        <p class="det_num">3、</p>
+                        <p class="det_wenzi">在必须执行的重复性工作时鼓励他/她探索总结新的工作方式方法，提高工作效率 </p>
+
+                        <p class="det_num">4、</p>
+                        <p class="det_wenzi">鼓励他/她在工作中，多方面拓展，了解行业内最前沿的信息和发展趋势"</p>
+                    </div>
+                </div>
+
+                <pre class="det_wd ybjlxys2">尊重</pre>
+                <div class="det_con">
+                    <p class="det_zb"><i class="ybjlxys2">认可/表现：</i> 自己的工作需要得到应有的认可和肯定，希望成为人群中的关注焦点</p>
+                    <p class="det_tit">因素：</p>
+                    <p class="det_ys">希望每一天的工作都是在解决全新的问题，对枯燥重复的工作内容感到厌倦</p>
+                    <p class="det_tit">建议：</p>
+                    <div class="adv">
+                        <p class="det_num">1、</p>
+                        <p class="det_wenzi">鼓励他/她在自己擅长的领域培训和支持其他同事</p>
+
+                        <p class="det_num">2、</p>
+                        <p class="det_wenzi">确保他/她的优异工作表现得到同事和领导的认可和赞扬 </p>
+
+                        <p class="det_num">3、</p>
+                        <p class="det_wenzi">每当他/她的工作最终被证明有效，不管用了什么方式和手段，都要强调其所具有的实用价值</p>
+
+                        <p class="det_num">4、</p>
+                        <p class="det_wenzi">鼓励他/她表达自己的观点，对于他/她提出的有建设性的观点，及时的给予支持和认可 </p>
+
+                        <p class="det_num">5、</p>
+                        <p class="det_wenzi">不要过多赞扬他/她，会降低赞扬的效果"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture072.png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/picture023.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char3">一般负激励因素</div>
+                <div class="jiao3"></div><br><br><br><br><br>
+                <pre class="det_wd ybfjlys2">人际</pre>
+                <div class="det_con">
+                    <p class="det_zb"><i class="ybfjlys2">社交/人际：</i> 乐于结交朋友，重视建立广泛的社会联系和关系</p>
+                    <p class="det_tit">因素：</p>
+                    <p class="det_ys">与他人的沟通互动需求比较低，不倾向于参与交际或应酬</p>
+                    <p class="det_tit">建议：</p>
+                    <div class="adv">
+                        <p class="det_num">1、</p>
+                        <p class="det_wenzi">避免给予他/她过多交际应酬的工作任务</p>
+
+                        <p class="det_num">2、</p>
+                        <p class="det_wenzi">在他/她参与各类行业内交流活动时，引导他/她专注于专业知识的获取和学习 </p>
+
+                        <p class="det_num">3、</p>
+                        <p class="det_wenzi">不强迫他/她参加工作应酬 </p>
+
+                        <p class="det_num">4、</p>
+                        <p class="det_wenzi">鼓励他/她从达成工作目标角度出发，与他人相处，建立工作关系"</p>
+                    </div>
+                </div>
+                <div class="det_con">
+                    <p class="det_zb"><i class="ybfjlys2">归属/团队：</i> 关注和谐的工作氛围，倾向于在团队中和他人合作开展工作</p>
+                    <p class="det_tit">因素：</p>
+                    <p class="det_ys">希望独自承担任务，不倾向于和他人合作，不关注团队</p>
+                    <p class="det_tit">建议：</p>
+                    <div class="adv">
+                        <p class="det_num">1、</p>
+                        <p class="det_wenzi">避免过多关心他/她的私人生活 </p>
+
+                        <p class="det_num">2、</p>
+                        <p class="det_wenzi">多为他/她安排个人可独立完成的工作任务 </p>
+
+                        <p class="det_num">3、</p>
+                        <p class="det_wenzi">在他/她参与团队合作工作时，与他/她充分沟通，明确他/她个人承担的工作任务 </p>
+
+                        <p class="det_num">4、</p>
+                        <p class="det_wenzi">在他/她参于集体活动时，强调集体活动对团队建设和发展的意义" </p>
+                    </div>
+                </div>
+
+
+                <div class="char4">强负激励因素</div>
+                <div class="jiao4"></div><br><br><br><br><br>
+                <pre class="det_wd qfjlys2">保障</pre>
+                <div class="det_con">
+                    <p class="det_zb"><i class="qfjlys2">安全/稳定：</i> 关注工作生活的安全与稳定，偏好有序的、计划性的、可预测的工作环境，不倾向于承担风险</p>
+                    <p class="det_tit">因素：</p>
+                    <p class="det_ys">较少关注工作带来的金钱利益和其它物质回报</p>
+                    <p class="det_tit">建议：</p>
+                    <div class="adv">
+                        <p class="det_num">1、</p>
+                        <p class="det_wenzi">向他/她说明组织的发展状态，确保工作环境的变动在他/她可承受的范围内</p>
+
+                        <p class="det_num">2、</p>
+                        <p class="det_wenzi">鼓励他/她在完成自己职责范围内的工作后，自主拓展，承担更多的工作，提升个人能力 </p>
+
+                        <p class="det_num">3、</p>
+                        <p class="det_wenzi">为他/她安排工作时，与他/她商讨确定工作目标，让他/她自主确定工作计划与安排 </p>
+
+                        <p class="det_num">4、</p>
+                        <p class="det_wenzi">向他/她提供必要保险和福利</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture072.png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/picture023.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="det_con">
+                    <p class="det_zb"><i class="qfjlys2">舒适/家庭：</i>追求舒适、轻松、优越的工作条件和环境，关注工作与生活的平衡</p>
+                    <p class="det_tit">因素：</p>
+                    <p class="det_ys">不关注工作与生活的平衡，接受在常规工作时间外执行任务，不介意加班</p>
+                    <p class="det_tit">建议：</p>
+                    <div class="adv">
+                        <p class="det_num">1、</p>
+                        <p class="det_wenzi">向他/她提供能够保持专注工作的环境和条件 </p>
+
+                        <p class="det_num">2、</p>
+                        <p class="det_wenzi">为他/她安排足够的工作任务，确保有一定的工作量</p>
+
+                        <p class="det_num">3、</p>
+                        <p class="det_wenzi">向他/她提供有一定难度和挑战性的工作 </p>
+
+                        <p class="det_num">4、</p>
+                        <p class="det_wenzi">和向他/她提供更多的休假相比，向其提供新领域的工作和学习机会，以及更好的职业发展渠道等激励手段可能会更有效</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/picture072.png" alt="">
+    </section>
+
+    <section class="footer sheet">
+        <img src="./img/picture05.png" alt="">
+    </section>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
+<script src="./js/WorkValues.js"></script>
