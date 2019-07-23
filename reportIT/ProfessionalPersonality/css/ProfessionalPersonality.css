@@ -1,0 +1,466 @@
+
+        * {
+            font-size: 16px !important;
+        }
+
+		.contanier{
+			width:100%;
+		}
+		section{
+			width: 100%;
+			height:'';
+			box-sizing: border-box;
+			font-size: 8px;
+            font-family: 'SourceHanSansCN-Bold';
+			
+		}
+		section>img{
+			width:100%;
+		}
+		.index {
+			padding:10px 0;
+		}
+
+        .index .userInfo {
+            height:277px;
+            background: linear-gradient(to right, #e4e2e3, white);
+            margin-top: -2px;
+        }
+
+        .index .userInfo ul{
+            overflow: hidden;
+            padding-top: 3.5rem;
+		}
+
+		.index .userInfo ul li{
+            float: left;
+            text-align: left;
+            font-size: 16px;
+            text-indent: 25px;
+            width: 35%;
+            color: #00A0E9;
+            font-family: "SourceHanSansCN-Bold";
+            line-height: 2rem;
+        }
+
+
+        .directory .explain {
+            background:rgba(255,255,255,1);
+            height: 90%;
+            margin-top: -10px;
+            position: relative;
+        }
+
+        .directory .explain ul {
+            width: 75%;
+            height: 55%;
+            margin: 0 auto;
+            position: absolute;
+            top: 13rem;
+            left: 0;
+            right: 0;
+        }
+
+        .directory .explain ul li {
+            display: inline-block;
+            clear: both;
+            width: 100%;
+            line-height: 3rem;
+            border-bottom: 1px solid #333333;
+            margin-top: 3rem;
+        }
+        
+        .directory .explain ul li .content {
+            float: left;
+        }
+
+        .directory .explain ul li .content span:nth-of-type(odd) {
+            font-size:40px;
+            font-family:SourceHanSansCN-Bold;
+            font-weight:bold;
+            color:rgba(106,184,197,1);
+            line-height:60px;
+        } 
+
+        .directory .explain ul li .content span:nth-of-type(even) {
+            font-size: 23px;
+            font-family:SourceHanSansCN-Regular;
+            font-weight: bold;
+            color: rgba(54,54,56,1);
+            line-height: 30px;
+            display: inline-block;
+        }
+
+        .directory .explain ul li p {
+            float: right;
+            width: 69px;
+            height: 91px;
+            background: rgba(106,184,197,1);
+            text-align: center;
+            line-height: 91px;
+            font-size: 40px;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            color: rgba(255,255,255,1);
+            line-height: 91px;
+            margin-top: 10px;
+        }   
+        
+        .introduction .border {
+            /* height: 87.5%; */
+            margin-top: -2px;
+            overflow: hidden;
+        }
+
+        .introduction .content {
+            width: 90%;
+            height: 90%;
+            margin: 0 auto;
+            
+        }
+        
+        .introduction .content p {
+            font-size:12px;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:24px;
+            width: 100%;
+           
+            margin-bottom: 1rem;    
+        }
+
+        .introduction .content img {
+            width: 23rem;
+            margin-left: 9rem;
+            margin-top: 1rem;
+        }
+
+        .introduction .content  .lit-title {
+            margin-top: 2rem;
+        }
+        .DISC_content{
+            width: 100%;
+            overflow: hidden;
+            display: flex;    flex-wrap: wrap;    align-items: flex-start;    align-content: flex-start;    justify-content: space-between;
+        }
+        
+        .DISC_content>li{
+            
+            
+            width:340px;
+            justify-content: space-between;
+            padding:20px;
+            margin-top:25px;
+            background:#F3F4F6;
+            box-sizing:border-box;
+        }
+        .DISC_theoty{
+            
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:18px;
+        }
+        .Read_suggest{
+            
+            box-sizing:border-box;
+            text-align: center;
+            line-height: 37px;
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            height:37px;
+            font-size: 13px;
+            margin-bottom:24px; 
+            background:rgba(243, 244, 246, 1);  
+        }
+        .introduction .content .char{
+            background-color: #00A0E9;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            line-height: 23px;
+            height: 23px;
+            float: left;
+		}
+
+        .introduction .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #00A0E9;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .introduction .content .tit_list {
+            width:98%;
+           margin-bottom: 30px;
+            margin-top: -40px;
+            margin-left: 25px;
+            float: left;
+
+        }
+        .tit_num{
+            float: left;
+        }
+
+
+        .results .border,.leading .border {
+            /* height: 86.1%; */
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .results .content {
+            width: 80%;
+            height: 60%;
+            margin: 0 auto;
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            right: 0;  
+        }
+
+        .results .content p {
+            font-size:16px;
+            font-family:SourceHanSansCN-Regular;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            line-height:24px;
+            margin-top: 1rem;
+            color: #333;
+        }
+        .sample_lef{
+            float: left;
+        }
+        .sample_charts{
+            height:740px;
+            width:350px;
+            
+        }
+        .sample_table{
+            width: 350px;
+            height: 85px;
+            background: #D7DAE1;
+            margin-top:30px;
+        }
+        .sample_table>ul{
+            overflow: hidden;
+        }
+        .sample_table>ul>li{
+            width:25%;
+            height:42px;
+            line-height:42px;
+            text-align:center;
+            font-weight:400;
+            box-sizing:border-box;
+            border:solid 1px #F3F4F6;
+            color:black;
+            background:#D7DAE1;
+            float:left;
+        }
+        .iwedoing_content{
+            overflow: hidden;
+            box-sizing: border-box;
+            padding:20px 37px;
+        }
+        .sample_introduce{
+            width:350px;
+            float: left;
+            padding:17px;
+            box-sizing: border-box;
+        }
+        .sample_introduce_title{
+            width:340px;
+            height:38px;
+            background:rgba(243,244,246,1);
+            margin: 0 auto;
+            font-size:12px;
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:18px;
+            text-align: center;
+            line-height: 38px;
+            margin-bottom: 40px;
+        }
+        .sample_introduce_title>span{
+            color:#01AAEC;
+        }
+        .sample_introduce .char{
+            background-color: #00A0E9;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            line-height: 23px;
+            height: 23px;
+            float: left;
+		}
+
+        .sample_introduce .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #00A0E9;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+        .sample_introduce>p{
+            font-size:12px;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            line-height:21px;
+            float:left;
+            margin-top:16px;
+            margin-bottom:13px;
+        }
+        .leading_wrapper{
+            padding: 0 37px;
+            box-sizing: border-box;
+        }
+        .leading_title{
+            height: 40px;
+            font-size:14px;
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:40px;
+            text-align: center;
+            padding-top:15px;
+
+        }
+
+        .leading .sm_title {
+            width: 100%;
+            height: 43px;
+        }
+
+        .leading .text {
+            height: 85px;
+        }
+        .leading .text2 {
+            height: 40px;
+        }
+        .leading .text3 {
+            height: 63px;
+        }
+        .leading_content{
+            width: 100%;
+            overflow: hidden;
+        }
+        .leading_item{
+            width: 200px;
+            overflow: hidden;
+            float:left;
+            margin-left:35px;
+        }
+        .leading_item:nth-child(1){
+            margin-left: 0;
+        }
+        .leading_item_title{
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:18px;
+            text-align: center;
+            margin-top:15px;
+            padding-bottom: 26px;
+        }
+        .leading_item_content{
+            height:500px;
+        }
+        .leading_item_table{
+            width:200px;
+            height: 66px;
+            background: #D7DAE1;
+            margin-top:30px;
+        }
+        .leading_item_table>ul{
+            overflow: hidden;
+        }
+        .leading_item_table>ul>li{
+            width:25%;
+            height:33px;
+            line-height:33px;
+            text-align:center;
+            font-weight:400;
+            box-sizing:border-box;
+            border:solid 1px #F3F4F6;
+            color:black;
+            background:#D7DAE1;
+            float:left;
+        }
+        .leading_item_char{
+            margin-top:20px;
+        }
+        .leading_item_char_title{
+            font-weight:bold;
+            
+            line-height: 18px;
+            font-size: 12px;
+        }
+        .leading_item_char_content{
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            line-height:21px;
+            margin-top:10px;
+            font-size: 12px;
+        }
+        .explain_warpper{
+            width: 95%;
+            margin: 25px auto;
+            padding-bottom: 50px;
+            box-sizing: border-box;
+            background: linear-gradient(180deg,rgba(240,241,245,1) 0%,rgba(219,220,225,1) 100%);
+           overflow: hidden;
+        }
+        .explain_item{
+            overflow: hidden;
+            padding: 15px 24px;
+            padding-bottom: 0;
+            box-sizing: border-box;
+            width:50%;
+            float: left;
+        }
+        
+        .explain_letter{
+            width:53px;
+            height:53px;
+            background:rgba(0,160,233,1);
+            color:white;
+            line-height: 53px;
+            text-align: center;
+            font-size:24px !important;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .explain_content{
+            font-size:12px;
+            font-weight:400;
+            color:rgba(54,54,56,1);
+            line-height:20px;
+        }
+        .explain_content>p{
+            font-weight:bold;
+            margin-top:20px;
+            margin-bottom: 8px;
+        }
+
+        .results {
+            position: relative;
+        }
+
+        .leading {
+            position: relative;
+        }
+
+        .index {
+            position: relative;
+        }
+
+        .introduction {
+            position: relative;
+        }

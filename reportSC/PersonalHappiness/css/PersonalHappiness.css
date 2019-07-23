@@ -1,0 +1,403 @@
+@font-face {
+    font-family: "SourceHanSansCN-Bold";
+    src: url("./typeface/SourceHanSansCN-Bold.woff2") format("woff2"),
+        url("./typeface/SourceHanSansCN-Bold.woff") format("woff"),
+        url("./typeface/SourceHanSansCN-Bold.ttf") format("truetype"),
+        url("./typeface/SourceHanSansCN-Bold.eot") format("embedded-opentype"),
+        url("./typeface/SourceHanSansCN-Bold.svg") format("svg");
+}
+
+.contanier {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    height: '';
+    box-sizing: border-box;
+    font-size: 8px;
+    font-family: 'SourceHanSansCN-Bold';
+
+}
+
+section>img {
+    width: 100%;
+}
+
+
+.index {
+    padding: 10px 0;
+}
+
+.index .userInfo {
+    height: 18.5%;
+    background: linear-gradient(to right, #e4e2e3, white);
+    width: 95%;
+    margin: -2px auto;
+}
+
+.index .userInfo ul {
+    overflow: hidden;
+    padding-top: 3.5rem;
+}
+
+.index .userInfo ul li {
+    float: left;
+    text-align: left;
+    font-size: 16px;
+    text-indent: 25px;
+    width: 35%;
+    color: #4DA571;
+    font-family: "SourceHanSansCN-Bold";
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+.introduce .border {
+    width: 100%;
+    height: 83.6%;
+    margin-top: -2px;
+    padding-top: 55px;
+}
+
+.introduce .border .content {
+    height: 90vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.introduce .content>p {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+}
+
+.introduce .content>table {
+    margin-top: 30px;
+    border: 1px solid #E8E8E8;
+    height: 31%;
+    width: 100%;
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 24px;
+}
+
+.introduce .content>table>tr:nth-child(1) {
+    background-color: #EDEDED;
+}
+
+.introduce .content table .tr {
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.introduce .content table .th {
+    border-right: 1px solid #e8e8e8;
+    width: 65px;
+    padding: 15px;
+}
+
+.introduce .content table td {
+    padding: 15px;
+}
+
+.introduce .content .advice {
+    height: 50px;
+    width: 100%;
+    background-color: #EDEDED;
+    margin-top: 50px;
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+    text-align: center;
+    line-height: 3em;
+}
+
+.introduce .content .con {
+    width: 100%;
+    height: 40%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.introduce .content .yuandian {
+    width: 10px;
+    height: 10px;
+    background-color: #4DA571;
+    border-radius: 5px;
+    float: left;
+    clear: both;
+    margin-top: 10px;
+}
+
+.introduce .content .wenzi {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 20px;
+    float: left;
+    clear: both;
+    margin-top: -13px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+
+
+.results .border {
+    width: 100%;
+    height: 83.6%;
+    margin-top: -2px;
+    padding-top: 55px;
+}
+
+.results .border .content {
+    height: 90vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.results .border .content>p {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(232, 160, 16, 1);
+    line-height: 24px;
+}
+
+.results .content>img {
+    margin-top: 30px;
+    margin-left: 22%;
+}
+
+.results .content .con_data {
+    width: 100%;
+    height: 410px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.results .con_data .classify {
+    width: 24.5%;
+    height: 100%;
+    float: left;
+    margin-left: 3px;
+    border-radius: 5px;
+}
+
+.results .classify>p {
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: SourceHanSansCN-Medium;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.results .classify .class_res {
+    width: 75%;
+    height: 90%;
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.results .class_res>p {
+    margin-left: 50px;
+    padding-top: 150px;
+    margin-left: 50px;
+    padding-top: 150px;
+}
+
+.results .class_res .data {
+    width: 100%;
+    overflow: hidden;
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 30px;
+    margin-top: 15px;
+}
+
+.results .class_res .data .res {
+    float: left;
+    margin-right: 48px;
+}
+
+
+
+.explain .border {
+    width: 100%;
+    height: 84.8%;
+    margin-top: -2px;
+    padding-top: 40px;
+    padding-left: 10px;
+    background-color: #EDEDED;
+}
+
+.explain .border .content {
+    height: 90vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.explain .content .char {
+    background-color: rgba(77, 165, 113, 1);
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+    line-height: 21px;
+}
+
+.explain .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px rgba(77, 165, 113, 1);
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.explain .content .explain_type {
+    width: 100%;
+    height: 100%;
+}
+
+.explain .explain_type .extype {
+    margin-bottom: 23px;
+    width: 41.5%;
+    height: 375px;
+    background-color: #fff;
+    float: left;
+    margin-right: 25px;
+    padding: 15px;
+}
+
+.explain .explain_type .extype>h1 {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.explain .explain_type .extype>i {
+    font-size: 14px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(155, 155, 155, 1);
+    line-height: 18px;
+}
+
+.explain .explain_type .extype .points {
+    width: 130px;
+    height: 50px;
+    margin-top: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.explain .explain_type .points p {
+    font-size: 13px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(155, 155, 155, 1);
+    line-height: 20px;
+}
+
+.explain .explain_type .points .sta {
+    height: 100%;
+    float: left;
+    margin-right: 50px;
+}
+
+.explain .explain_type .points .ori {
+    height: 100%;
+    float: left;
+}
+
+.explain .explain_type .points .norm,
+.explain .explain_type .points .original {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    font-size: 16px;
+    color: rgba(51, 51, 51, 1);
+}
+
+/* .red {
+    color: rgba(225, 70, 25, 1) !important;
+}
+
+.green {
+    color: #4DA571 !important;
+}
+
+.blue {
+    color: #3D87FF !important;
+}
+
+.zise {
+    color: #6A1EDA !important;
+} */
+
+.explain .explain_type .extype>b {
+    font-size: 14px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 18px;
+}
+
+.explain .explain_type .extype>b>i {
+    color: #E8A010;
+}
+
+.explain .explain_type .extype .progressA .progress {
+    height: 7px;
+    width: 240px;
+    background-color: #ccc;
+    margin-top: 20px;
+    border-radius: 5px;
+    float: left;
+}
+
+.explain .explain_type .extype .progressA>span {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-size: 14px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.explain .extype .progress .pro {
+    width: 45%;
+    background-color: #4DA571;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.explain .extype>p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 30px;
+}

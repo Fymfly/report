@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>职业个性</title>
+    <!-- Normalize or reset CSS with your favorite library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>@page { size: A4 }</style>
+    <link rel="stylesheet" href="../css/react.css">
+    <link rel="stylesheet" href="./css/ProfessionalPersonality.css">
+</head>
+
+<body body class="A4">
+    <div id="app" v-cloak>
+    <section class="index sheet">
+        <img src="./img/Simple_DISC_NEW_picture01.png" style="margin-top:-10px;">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span id="Name">张菊花</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span id="Gender">女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span id="Age">18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span id="Testtime"></span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/Simple_DISC_NEW_picture06.png" style="position: absolute;
+        bottom: 0px;">
+    </section>
+
+    <section class="introduction sheet">
+        <img src="./img/Simple_DISC_NEW_picture02.png" style="width: 101%; margin-top: -10px;" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="lit-title">
+                    <div class="char">
+                            DISC理论介绍
+                    </div>
+                    <div class="jiao"></div>
+                    </div><br><br><br><br>
+                    <p>
+                        本测评是格略咨询基于威廉·马斯顿博士 DISC 人类行为语言理论、融合格略已有的能力模型和行为风格理论，将您在职业中的主导行为特征分为四种类型，分别为：
+                    </p>
+                     <ul class="DISC_content">
+                         <li>
+                             <div class="DISC_theoty">
+                                D-支配性（Dominance）
+                             </div>
+                             <p>
+                                代表在自认为不友好的环境中主动出击
+                             </p>
+                         </li>
+                         <li>
+                            <div class="DISC_theoty">
+                                    I-影响性（Influence）
+                            </div>
+                            <p>
+                                    代表在自认为友好的环境中主动表现
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="DISC_content">
+                        <li>
+                            <div class="DISC_theoty">
+                                    S-稳定性（Steadiness）
+                            </div>
+                            <p>
+                                    代表在自认为友好的环境中顺势而为
+                            </p>
+                        </li>
+                        <li>
+                            <div class="DISC_theoty">
+                                    C-遵从性（Compliance）
+                            </div>
+                            <p>
+                                    代表在自认为不友好的环境中被动顺应
+                            </p>
+                        </li>
+                    </ul>
+                   
+                <div class="lit-title">
+                    <div class="char">
+                        报告阅读建议
+                    </div>
+                    <div class="jiao"></div>
+                </div><br><br><br><br>
+                <p>
+                        本报告旨在体现您在职业中的主导行为特征（偏好），帮助您了解和分析您的职业个性，提供您与不同类型风格人物有效沟通的技巧，以及可能适合您的行为特征的职场发展建议。
+                </p>
+                <div class="Read_suggest">
+                        阅读时请注意以下几点
+                </div>
+                <p class="tit_num">1、</p>
+                <p class="tit_list">本报告对您的职业个性特征进行了详细描述，它能够帮助您拓展思路，接受更多的可能性，而非限制您的选择；</p>
+
+                <p class="tit_num">2、</p>
+                <p class="tit_list">报告结果（主导行为特征）没有“好”与“坏”之分，但不同特点对于不同的工作存在“适合”与“不适合”的区别，从而表现出具体场景下的优劣势； </p>
+
+                <p class="tit_num">3、</p>
+                <p class="tit_list">您的主导行为特征由成长环境、生活和工作经历决定，不要想象去改变它，但是我们可以在了解主导特征的基础上对某些特征进行补充和平衡，从而优化我们的决策，更有效地发挥潜力。</p>
+            </div>
+        </div>
+
+        <img src="./img/Simple_DISC_NEW_picture07 (1).png" style="width: 101%;    position: absolute;
+        bottom: 0px;" alt="">
+    </section>
+
+    <section class="results sheet">
+        <img src="./img/Simple_DISC_NEW_picture03_DISC.png" alt="">
+        <div class="border">
+            <div class="iwedoing_content">
+                <div class="sample_lef">
+                    <div class="sample_charts" id="sample_charts"></div>
+                    <div class="sample_table">
+                        <ul>
+                            <li class="sample_table_title"></li>
+                            <li class="sample_table_title"></li>
+                            <li class="sample_table_title"></li>
+                            <li class="sample_table_title"></li>
+                            <li class="sample_table_char"></li>
+                            <li class="sample_table_char"></li>
+                            <li class="sample_table_char"></li>
+                            <li class="sample_table_char"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="sample_introduce">
+                    <div class="sample_introduce_title">
+                        您的主导行为特征：<span class='feature_char'>CSD</span>
+                    </div>
+                    <div class="char">
+                            您的行为特征
+                    </div>
+                    <div class="jiao"></div>
+                    <p class="sample_char"></p>
+                    <div class="charFlag">
+                        <div class="char ">
+                            您的优势与弱势
+                        </div>
+                        <div class="jiao"></div>
+                    </div>
+                    
+                    <p class="sample_char"></p>
+                    <div class="charFlag">
+                        <div class="char ">
+                            您的沟通风格
+                        </div>
+                        <div class="jiao"></div>
+                    </div>
+                    
+                    <p class="sample_char"></p>
+                </div>
+            </div>
+        </div>
+        <img src="./img/Simple_DISC_NEW_picture07(2).png" style="width: 101%;      position: absolute;
+        bottom: 0px;z-index:10;"/>
+    </section>
+
+    <section class="sheet leading">
+        <img src="./img/Simple_DISC_NEW_picture03_DISC.png" alt="">
+        <div class="border" style="height: 79%;">
+            <div class="leading_wrapper">
+                <div class="leading_title">
+                        您的行为特征曲线图
+                </div>
+                <div class="leading_content">
+                    <div class="leading_item">
+                        <div class="leading_item_title">
+                            工作面具（图一）
+                        </div>
+                        <div class="leading_item_content" id="ChartWorkMask_Indicator"></div>
+                        <div class="leading_item_table">
+                            <ul>
+                                <li class="leading_item_table_title">D</li>
+                                <li class="leading_item_table_title">I</li>
+                                <li class="leading_item_table_title">S</li>
+                                <li class="leading_item_table_title">C</li>
+                                <li class="leading_item_table_char leading_item_table_char1"></li>
+                                <li class="leading_item_table_char leading_item_table_char1"></li>
+                                <li class="leading_item_table_char leading_item_table_char1"></li>
+                                <li class="leading_item_table_char leading_item_table_char1"></li>
+                            </ul>
+                        </div>
+                        <div class="leading_item_char">
+                            <div class="leading_item_char_title">
+                                <p>工作面具</p>
+                                <p>Work Mask</p>
+                            </div>
+                            <div class="leading_item_char_content">
+                                是您在工作情境下的行为表现。这种行为模式是您在特定环境下理应呈现的理想“面具”，通常不被他人所知。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leading_item">
+                        <div class="leading_item_title">
+                            压力下的行为反应（图二）
+                        </div>
+                        <div class="leading_item_content" id="ChartBR_UnderStress_Indicator"></div>
+                        <div class="leading_item_table">
+                            <ul>
+                                <li class="leading_item_table_title">D</li>
+                                <li class="leading_item_table_title">I</li>
+                                <li class="leading_item_table_title">S</li>
+                                <li class="leading_item_table_title">C</li>
+                                <li class="leading_item_table_char leading_item_table_char2"></li>
+                                <li class="leading_item_table_char leading_item_table_char2"></li>
+                                <li class="leading_item_table_char leading_item_table_char2"></li>
+                                <li class="leading_item_table_char leading_item_table_char2"></li>
+                            </ul>
+                        </div>
+                        <div class="leading_item_char">
+                            <div class="leading_item_char_title">
+                                <p>压力下的行为反应</p>
+                                <p>Behavior under Pressure</p>
+                            </div>
+                            <div class="leading_item_char_content">
+                                是您在压力情景下的行为表现。这种行为模式是您天生的、固有的，代表您最真实的内在动机和欲求，通常您也不自知。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leading_item">
+                        <div class="leading_item_title">
+                            自我形象（图三）
+                        </div>
+                        <div class="leading_item_content" id="ChartSelfImage_Indicator"></div>
+                        <div class="leading_item_table">
+                            <ul>
+                                <li class="leading_item_table_title">D</li>
+                                <li class="leading_item_table_title">I</li>
+                                <li class="leading_item_table_title">S</li>
+                                <li class="leading_item_table_title">C</li>
+                                <li class="leading_item_table_char leading_item_table_char3"></li>
+                                <li class="leading_item_table_char leading_item_table_char3"></li>
+                                <li class="leading_item_table_char leading_item_table_char3"></li>
+                                <li class="leading_item_table_char leading_item_table_char3"></li>
+                            </ul>
+                        </div>
+                        <div class="leading_item_char">
+                            <div class="leading_item_char_title">
+                                <p>自我形象</p>
+                                <p>Self-Image</p>
+                            </div>
+                            <div class="leading_item_char_content">
+                                是您自己眼中的自己。这种行为模式相对稳定，是您来自过去的习得性反应与环境期待的结合，通常被他人和自己所熟知。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/Simple_DISC_NEW_picture07_DISC.png" alt="" style="position: absolute;
+        bottom: 0px;">
+    </section>
+
+    <section class="sheet leading">
+        <img src="./img/Simple_DISC_NEW_picture04_DISC (1).png" alt="">
+        <div class="border" style="    height: 86%;    margin-top: -10px;">
+            <div class="explain_warpper">
+                <div class="explain_item">
+                    <div class="explain_letter">
+                        D
+                    </div>
+                    <div class="explain_content">
+                        <p class="sm_title">考量一个人如何解决问题和应对挑战</p> 
+                        <p style="margin-top: 16px;">强度：</p>
+                        
+                        <div class="text">
+                            D 值越高，在试图解决困难和障碍方面所表现出的积极性和进取心就越强。<br/>
+                        
+                            D 值越低，则说明此人在做出决策前越倾向于多搜集信息。 
+                        </div>
+                        
+                        <p>当处于对抗性环境中时：</p>
+                        
+                        <div class="text2">
+                            D 值高的人则会显得非常进取、积极。
+                        </div>
+                        
+                        <!-- &#9702  &#176 -->
+                        <p>情感：</p>
+                        <div class="text3">
+                            D 因素用以考量一个人的易怒情感。<br/>
+                            D 值极高者极易生气发怒； <br/>
+                            D 值极低者不易生气发怒。 
+                        </div>
+                        
+                    </div>    
+                    
+                </div>
+                <div class="explain_item">
+                    <div class="explain_letter">
+                        C
+                    </div>
+                    <div class="explain_content">
+                        <p>考量一个人对他人的期待和制定的规章制度如何做出反应</p> 
+                        <p>强度：</p>
+                        
+                        <div class="text">
+                            C 值越高，表明此人越能够遵守他人制定的规章制度。
+                            <br/> 
+                            C 值越低，表明此人更愿意挑战规章制度并寻求独立。 
+                        </div>
+                        
+                       
+                        <p>当处于对抗性环境中时：</p>
+                        
+                        <div class="text2">
+                            C 值越高的人则更容易反应消极。
+                        </div>
+                        
+                        <p>情感：</p>
+                        <div class="text3">
+                            C 因素用以考量一个人的恐惧感； <br/>
+                            C 值越高，说明此人的恐惧动因越强； <br/>
+                            C 值越低，说明此人越无所畏惧。
+                        </div>
+                        
+                    </div>    
+                    
+                </div>
+                <div class="explain_item">
+                    <div class="explain_letter">
+                        I
+                    </div>
+                    <div class="explain_content">
+                        <p>考量一个人影响和说服他人的能力</p>    
+                        <p>强度：</p>
+                        
+                        <div class="text">
+                            I 值越高，在影响他人的思维方式方面，就越善于言辞，具有说服力。
+                            <br/> 
+                            I 值越低，越倾向于用数据和事实来说明问题。
+                        </div>
+                        
+                        <p>当处于对抗性环境中时：</p>
+                        
+                        <div class="text2">
+                            I 值越高的人反应越积极，且倾向于通过协商达成共识
+                        </div>
+                        
+                        <p>情感：</p>
+                        <div class="text3">
+                            I 因素用以考量一个人的乐观情感； <br/>
+                            I 值极高者情绪非常乐观； <br/>
+                            I 值低者则倾向于悲观。
+                        </div>
+                        
+                    </div>    
+                    
+                </div>
+                <div class="explain_item">
+                    <div class="explain_letter">
+                        S
+                    </div>
+                    <div class="explain_content">
+                        <p>考量一个人开展工作、承担责任的快慢</p>    
+                        <p>强度：</p>
+                        
+                        <div class="text">
+                            S 值越高，越倾向于一次有始有终地完成某件任务。同样，他们对变化有较强的抵触心理。
+                            <br/> 
+                            S 值越低，工作节奏越快，希望变化的愿望越强烈。
+                        </div>
+                       
+                       
+                        <p>当处于对抗性环境中时：</p>
+                        
+                        <div class="text2">
+                            S 值越高的人反应越消极。
+                        </div>
+                       
+                        <p>情感：</p>
+                        <div class="text3">
+                            S 用以考量一个人是否缺乏情绪；  <br/>
+                            S 值越高，越少情绪化，内心越难解读； <br/>
+                            S 值越低，越情绪化，而且也越善于表达。
+                        </div>
+                        
+                    </div>    
+                    
+                </div>
+            </div>
+        </div>
+        <img src="./img/Simple_DISC_NEW_picture04_DISC (2).png" alt="" style="position: absolute;
+        bottom: 0px;">
+    </section>
+
+    <section class="sheet">
+        <img src="./img/Simple_DISC_NEW_picture05.png" alt=""> 
+    </section>
+</div>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+<script src="./js/ProfessionalPersonality.js"></script>

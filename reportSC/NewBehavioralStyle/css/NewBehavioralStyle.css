@@ -1,0 +1,450 @@
+* {
+    font-size: 16px !important;
+}
+
+.contanier {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    height: '';
+    box-sizing: border-box;
+    font-size: 8px;
+    font-family: 'SourceHanSansCN-Bold';
+
+}
+
+section>img {
+    width: 100%;
+}
+
+
+.index {
+    padding: 10px 0;
+}
+
+.index .userInfo {
+    height: 18.5%;
+    background: linear-gradient(to right, #e4e2e3, white);
+    margin-top: -2px
+}
+
+.index .userInfo ul {
+    overflow: hidden;
+    padding-top: 3.5rem;
+}
+
+.index .userInfo ul li {
+    float: left;
+    text-align: left;
+    font-size: 16px;
+    text-indent: 25px;
+    width: 35%;
+    color: #326D9D;
+    font-family: "SourceHanSansCN-Bold";
+    line-height: 2rem;
+}
+
+.lead .border {
+    width: 100%;
+    height: 83.5%;
+    margin-top: -2px;
+    padding-top: 55px;
+}
+
+.lead .border .content {
+    height: 90vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.lead .content .lead_top {
+    width: 100%;
+    height: 55%;
+    position: relative;
+    overflow: hidden;
+}
+
+.lead .content .char {
+    background-color: #176395;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    
+    height: 23px;
+    float: left;
+    line-height: 21px;
+}
+
+.lead .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #176395;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.lead .content .lead_top p {
+    float: left;
+    clear: both;
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 18px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.lead .content .lead_top ul {
+    width: 100%;
+    height: 190px;
+    position: absolute;
+    top: 185px;
+}
+
+.lead .content .lead_top li {
+    width: 48%;
+    height: 80px;
+    float: left;
+    overflow: hidden;
+    background-color: #F3F4F6;
+}
+
+.lead .content .lead_top ul li p {
+    margin-left: 15px;
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 15px;
+}
+
+.lead .content .lead_bottom {
+    width: 100%;
+    height: 40%;
+    margin-top: 6%;
+    position: relative;
+}
+
+.lead .content .lead_bottom .lime_light {
+    width: 100%;
+    height: 37px;
+    position: absolute;
+    top: 55px;
+    text-align: center;
+    line-height: 3em;
+    font-size: 12px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    background-color: #F3F4F6;
+}
+
+.lead .content .lead_bottom .wenzi {
+    margin-top: -13px;
+    margin-left: 20px;
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 16px;
+}
+
+
+.Chart_analysis .border {
+    width: 100%;
+    height: 83.6%;
+    margin-top: -2px;
+    padding-top: 55px;
+}
+
+.Chart_analysis .border .content {
+    height: 75vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Chart_analysis .content p {
+    font-size: 14px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 21px;
+}
+
+.Chart_analysis .content span {
+    font-size: 14px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: rgba(23, 99, 149, 1);
+    /* line-height: 75px; */
+}
+
+.Chart_analysis .content #main {
+    width: 100%;
+    background-color: #F3F4F6;
+    margin-top: 30px;
+    padding-bottom: 70px;
+}
+
+.charts {
+    box-sizing: border-box;
+    width: 100%;
+    height: 250px;
+    background: rgba(243, 244, 246, 1);
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 20px 5px;
+}
+
+.prog_wrapper {
+    width: 80%;
+    height: 32px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #D8D8D8;
+}
+
+.prog>li {
+    position: relative;
+}
+
+.prog>li>span {
+    position: absolute;
+}
+
+.prog>li span:nth-child(1) {
+    left: 20px;
+    top: 6px;
+}
+
+.prog>li span:nth-child(2) {
+    right: 0;
+}
+
+.prog_left {
+    float: left;
+    width: 50%;
+    height: 100%;
+
+}
+
+.prog_right {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.prog_left_color {
+    background: -webkit-linear-gradient(left, #A389D4, #899ED4);
+    float: right;
+    height: 100%;
+    line-height: 35px;
+    width: 56px;
+}
+
+.prog_right_color {
+    background: linear-gradient(225deg, rgba(29, 233, 182, 1) 0%, rgba(29, 196, 233, 1) 100%);
+    text-align: right;
+    height: 100%;
+    line-height: 35px;
+}
+
+.performance .border {
+    width: 100%;
+    height: 83.6%;
+    margin-top: -2px;
+    padding-top: 55px;
+}
+
+.performance .border .content {
+    height: 99vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.performance .border .content p {
+    font-size: 14px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    /* color:rgba(54,54,56,1); */
+    line-height: 21px;
+}
+
+.performance .content .way {
+    width: 100%;
+
+    background-color: #DBDCE1;
+    margin-top: 4%;
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+.performance .content .way p {
+    font-size: 14px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    /* color:rgba(54,54,56,1); */
+    line-height: 21px;
+}
+
+.performance .content .way .world_way {
+    width: 93%;
+    height: 20%;
+    margin: 0px auto;
+    padding-top: 0px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.performance .content .world_way .wwl {
+    width: 47%;
+    height: 75%;
+    margin-top: 20px;
+    float: left;
+   
+}
+
+.performance .content .world_way .letter {
+    font-size: 24px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    line-height: 36px;
+    padding: 0px;
+    width: 53px;
+    height: 53px;
+    text-align: center;
+    line-height: 2em;
+}
+
+.blue {
+    background-color: #176395;
+    color: #fff;
+}
+
+.gray {
+    color: #BDBEC5;
+    border: 1px solid #BDBEC5;
+}
+
+.performance .content .world_way .wwl .smtitle {
+    margin-top: -55px;
+    margin-left: 65px;
+    margin-bottom: 5px;
+}
+
+.performance .content .world_way .wwl .con {
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(54, 54, 56, 1);
+    line-height: 16px;
+    margin-left: 64px;
+}
+
+.performance .content .world_way .wwr {
+    width: 47%;
+    height: 75%;
+    float: left;
+    margin-left:6%;
+    margin-top: 20px;
+}
+
+.performance .content .world_way .wwr .smtitle {
+    margin-top: -55px;
+    margin-left: 65px;
+    margin-bottom: 5px;
+}
+
+.performance .content .world_way .wwr .con {
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(54, 54, 56, 1);
+    line-height: 16px;
+    margin-left: 64px;
+}
+
+
+.expression .border {
+    width: 100%;
+    height: 83.6%;
+    margin-top: -2px;
+    padding-top: 55px;
+}
+
+.expression .border .content {
+    height: 90vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.expression .content p {
+    font-size: 14px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(54, 54, 56, 1);
+    line-height: 21px;
+}
+
+.expression .content .con_t,
+.expression .content .con_b {
+    width: 100%;
+    height: 45%;
+    margin-top: 30px;
+}
+
+.expression .content .char {
+    background-color: #176395;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+.expression .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #176395;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.expression .content .yuandian {
+    width: 10px;
+    height: 10px;
+    background-color: #176395;
+    border-radius: 5px;
+    float: left;
+    clear: both;
+    margin-top: 30px;
+}
+
+.expression .content .wenzi {
+    font-size: 12px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 13px;
+    float: left;
+    clear: both;
+    margin-top: -14px;
+    margin-left: 20px;
+}
+.lit-title{
+    overflow: hidden;
+    
+}

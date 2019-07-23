@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中高层管理-180</title>
+    <!-- Normalize or reset CSS with your favorite library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+    <link rel="stylesheet" href="../css/react.css">
+    <link rel="stylesheet" href="./css/TheHighLevel.css">
+</head>
+
+<body body class="A4">
+    <section class="index sheet">
+        <img src="./img/TheHighLevel_picture01.png" style="margin-top:-10px;">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span id="Name">张菊花</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span id="Gender">女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span id="Age">18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span id="TestTime"></span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/TheHighLevel_picture06.png" style="height: 10%;margin-top: -1mm;">
+    </section>
+
+    <section class="directory sheet">
+        <img src="./img/TheHighLevel_picture02.png" style="width: 101%; margin-top: -10px;" alt="">
+        <div class="explain">
+            <ul>
+                <li>
+                    <div class="content">
+                        <span>报告导语</span><br>
+                        <span>报告阅读说明及管理能力测评模型介绍</span>
+                    </div>
+                    <p>1</p>
+                </li>
+                <li>
+                    <div class="content">
+                        <span>能力肖像及分析</span><br>
+                        <span>能力情况总览 <br>能力维度详析——自评<br>能力维度详析——他评<br>能力对比分析</span>
+                    </div>
+                    <p>4</p>
+                </li>
+                <li>
+                    <div class="content">
+                        <span>个人能力发展建议</span><br>
+                        <span>个人能力优劣分析及个人发展建议</span>
+                    </div>
+                    <p>12</p>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/TheHighLevel_picture07.png" style="width: 101%" alt="">
+    </section>
+
+    <section class="instructions sheet">
+        <img src="./img/TheHighLevel_picture022.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">报告阅读说明</div>
+                <div class="jiao"></div>
+                <ul>
+                    <li>
+                        <img class="bigimg" src="./img/TheHighLevel_Img03.png" alt="">
+                        <img class="icon" src="./img/TheHighLevel_icon_01.png" alt="">
+                        <p>本报告如实地反映被评估人本人和他人的评估结果。它可以帮助被评估人更好地理解并有效运用测评的结果。这些结果是根据评估人对被评估人日常工作表现如实的观察得出的，能反映被评估人在各个管理能力上的真实水平。</p>
+                    </li>
+                    <li>
+                        <img class="bigimg" src="./img/TheHighLevel_Img02.png" alt="">
+                        <img class="icon" src="./img/TheHighLevel_icon_01.png" alt="">
+                        <p>报告旨在帮助被评估人更好地识别自身的优势和不足，促使其进一步提高和发展管理能力，进而提升组织的竞争力。同时基于评估结果，报告提出针对性的发展建议，帮助被评估人制定具体的行动计划，促使其向更积极的方向转变。</p>
+                    </li>
+                    <li>
+                        <img class="bigimg" src="./img/TheHighLevel_Img01.png" alt="">
+                        <img class="icon" src="./img/TheHighLevel_icon_01.png" alt="">
+                        <p> 此报告的准确度取决于评估人回答问题的真诚及其对被评估人的认识程度。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture071.png" alt="">
+    </section>
+
+    <section class="management sheet">
+        <img src="./img/TheHighLevel_picture021.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">管理能力测评模型</div>
+                <div class="jiao"></div>
+                <div class="con_big">
+                    <div class="con_top">
+                        <p>一、测评模型介绍</p>
+                        <p style="margin-top:10px;color: rgba(51,51,51,1);line-height: 24px;">结合格略研究院多年管理者能力模型构建与测评经验，构建出以下模型，包含十大能力素质，具体如下图。本次测评将围绕此管理能力模型进行评估。</p>
+                        <img src="./img/TheHighLevel_img04.png" alt="">
+                    </div>
+                    <div class="con_bom">
+                        <p>二、报告图表及符号示意</p>
+                        <p style="color: rgba(51,51,51,1);margin-top: 10px;margin-bottom: 10px;">1、您的整体表现可展示您各项管理能力水平，该总体表现在本报告中用柱状图加以表示。</p>
+                        <div class="report_chart">
+                            <img src="./img/TheHighLevel_img_05.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture072.png" alt="">
+    </section>
+
+    <section class="score sheet">
+        <img src="./img/TheHighLevel_picture022.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="con_top">
+                    <p>2、报告中的勾号、圆圈和叉号表示您的行为方式可能产生正面或负面的影响。</p>
+                    <table>
+                        <tr>
+                            <th>符号</th>
+                            <th>简短说明</th>
+                            <th>定义</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/TheHighLevel_icon_02.png" alt=""></td>
+                            <td>可能的强项</td>
+                            <td>可能产生正面影响</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/TheHighLevel_icon_03.png" alt=""></td>
+                            <td>一般</td>
+                            <td>可能不产生正面影响或负面影响</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/TheHighLevel_icon_04.png" alt=""></td>
+                            <td>可能的弱项</td>
+                            <td>可能产生负面影响</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="con_bom">
+                    <p>3、报告中的分值1-5分，表示他人对您每种行为出现频次的评估。</p>
+                    <table>
+                        <tr>
+                            <th>符号</th>
+                            <th>简短说明</th>
+                            <th>定义</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>非常不符合</td>
+                            <td>可能很少情况下表现出题目描述的行为</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>较不符合</td>
+                            <td>可能较少情况下表现出题目描述的行为</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>较符合</td>
+                            <td>可能较多情况下表现出题目描述的行为</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>非常符合</td>
+                            <td>可能很多情况下表现出题目描述的行为</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>完全符合</td>
+                            <td>可能总是表现出题目描述的行为，是这方面的行为典范，已形成习惯</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture073.png" alt="">
+    </section>
+
+    <section class="overview sheet">
+        <img src="./img/TheHighLevel_picture023.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">能力情况总览</div>
+                <div class="jiao"></div>
+                <div class="con_top">
+                    <p>一、能力整体扫描</p>
+                    <p style="margin-top: 10px;color: #333;margin-bottom: 15px;">您在各项能力指标上的得分概况如下图，包括自评分、他评分。</p>
+                    <div class="scanning" id="scanning">
+
+                    </div>
+                </div>
+                <div class="con_bom">
+                    <p>二、能力优势和待发展</p>
+                    <p style="margin-top: 10px;color: #333;margin-bottom: 10px;">根据您自评和他评情况，判断该您自认为的相对优势和劣势能力，以及他人认为您存在的相对优势能力和劣势能力。</p>
+                    <div class="ProsCons">
+                        <div class="pc_top">
+                            <div class="pctop_l">
+                                <p>自我评价相对优势能力</p>
+                            </div>
+                            <div class="pctop_r">
+                                <p>他人评价相对优势能力</p>
+                            </div>
+                        </div>
+                        <div class="pc_bom">
+                            <div class="pcbom_l">
+                                <p id="self_adv" style="color:#555;font-weight: 400;">客户导向 积极进取</p>
+                            </div>
+                            <div class="pcbom_r">
+                                <p id="other_adv" style="color:#555;font-weight: 400;">资源整合 客户导向</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ProsCons">
+                        <div class="pc_top">
+                            <div class="pctop_l">
+                                <p>自我评价相对劣势能力</p>
+                            </div>
+                            <div class="pctop_r">
+                                <p>他人评价相对劣势能力</p>
+                            </div>
+                        </div>
+                        <div class="pc_bom">
+                            <div class="pcbom_l">
+                                <p id="self_ids" style="color:#555;font-weight: 400;">勇于承担 创新优化</p>
+                            </div>
+                            <div class="pcbom_r">
+                                <p id="other_ids" style="color:#555;font-weight: 400;">勇于承担 创新优化</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture074.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture023.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">能力各维度详析——自评</div>
+                <div class="jiao"></div>
+                <div class="con_cen">
+                    <p>一、能力整体扫描</p>
+                    <p style="color:rgba(51, 51, 51, 1)">通过自我评估可以帮助您掌握自己的优势与不足，发现自我认知的偏差，促进自省，更有针对性的提升。下面是您在各项能力指标上的自我评价结果。</p>
+                    <ul>
+                        <li>
+                            <span>积极进取</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="apt"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="pos_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">能够从自我价值实现的角度实现高标准、具有挑战性的目标，不断自我激励，寻求各种方法努力获得成功。</p>
+                        </li>
+                        <div id="agg" class="height"></div>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <span>勇于承担</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="cpr"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="cou_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">始终立足公司发展的大局，积极地看待转型发展中的问题并敢于负责、主动承担、季节奉献，能包容，善团结。</p>
+                        </li>
+                        <div id="courage" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture076.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture023.png" alt="">
+        <div class="border">
+            <div class="content" style="top: 0em;">
+                <div class="con_cen">
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>正直诚信</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="fpr"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="fai_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">坚持从客观事实出发，公平公正，坚持原则，不畏权威，言行一致，推动坦诚信任的组织文化建设。</p>
+                        </li>
+                        <div id="faith" class="height"></div>
+                    </ul>
+
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>系统思维</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="tpr"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="thin_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">立足公司战略定位，洞察行业发展的趋势，系统分析业务发展的各种因素，把握本质并结合实际，形成整体判断和系统性的策略安排。</p>
+                        </li>
+                        <div id="thinking" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture077.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture023.png" alt="">
+        <div class="border">
+            <div class="content" style="top:0em">
+                <div class="con_cen">
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>客户导向</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="cpk"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="cus_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">能够积极关注并有效识别客户的真实需求，采取有效行动并建立良好的客户互动关系。</p>
+                        </li>
+                        <div id="customer" class="height"></div>
+                    </ul>
+
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>创新优化</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="opr"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="opt_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">敢于打破常规，接纳并进行主动创新，善于从不同的角度提出新颖的问题解决方法，推进问题得到改善。</p>
+                        </li>
+                        <div id="optimize" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture078.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture023.png" alt="">
+        <div class="border">
+            <div class="content" style="top:0em">
+                <div class="con_cen">
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>变革管理</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="mpr"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="man_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">能够积极识别和寻求变革的机会和阻力，并为取得建设性的、有益的结果激发变革共识、制定系统计划并主导推进和有效地控制变化。</p>
+                        </li>
+                        <div id="management" class="height"></div>
+                    </ul>
+
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>团队领导</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="lpr"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="lead_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">通过有效的机制和方法进行团队价值观的引导、目标整合、信任建立、潜能激发，塑造优秀的团队文化，推动团队高绩效实现。</p>
+                        </li>
+                        <div id="lead" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture079.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture023.png" alt="">
+        <div class="border">
+            <div class="content" style="top:0em">
+                <div class="con_cen">
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>跨界协同</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="prj"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="cro_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">立足公司整体并从流程协同的角度主动打破边界、换位沟通并通力合作，出现分歧时能寻求整合解决，建立组织协同优势。</p>
+                        </li>
+                        <div id="crossover" class="height"></div>
+                    </ul>
+
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>资源整合</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul id="ipr"></ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="int_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">立足价值链的协同，从增加和创造商业价值的角度，通过合理的方式和机制获取资源，并进行有效配置以实现资源价值最大化。</p>
+                        </li>
+                        <div id="integration" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture0710.png" alt="">
+    </section>
+
+    <section class="heReview sheet">
+        <img src="./img/TheHighLevel_picture023.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">能力各维度详析——他评</div>
+                <div class="jiao"></div>
+                <div class="con_cen">
+                    <p>通过他人评估，可帮助您看到自己视线所不及的地方，下面是您在各指标上的他评得分。</p>
+                    <table>
+                        <tr>
+                            <th>能力</th>
+                            <th>行为</th>
+                            <th>评分结果</th>
+                        </tr>
+                        <tr id="positive"></tr>
+                        <tr id="bear"></tr>
+                        <tr id="integrity"></tr>
+                        <tr id="system"></tr>
+                        <tr id="guide"></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture0711.png" alt="">
+    </section>
+
+    <section class="heReview sheet">
+        <img src="./img/TheHighLevel_picture023.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="con_cen" style="margin-top: 30px;">
+                    <table>
+                        <tr>
+                            <th>能力</th>
+                            <th>行为</th>
+                            <th>评分结果</th>
+                        </tr>
+                        <tr id="innovate"></tr>
+                        <tr id="change"></tr>
+                        <tr id="team"></tr>
+                        <tr id="synergy"></tr>
+                        <tr id="resources"></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture0712.png" alt="">
+    </section>
+
+    <section class="contrast sheet after">
+        <img src="./img/TheHighLevel_picture023.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">能力对比</div>
+                <div class="jiao"></div>
+                <p>按照他评与自评的高低，将不同指标划分到待发展共识区、盲区、潜能区、优势共识区，对于不同区域指标，有不同的发展策略。</p>
+                <img style="margin-left: 40px;" src="./img/TheHighLevel_img_06.png" alt="">
+                <p class="line"></p>
+                <div class="sm_title">
+                    <div class="zjiao"></div>
+                    您的能力对比结果
+                </div>
+                <div class="con_bom">
+                    <div class="results potential" style="margin-right: 25px;" id="potential">
+                        <p>潜能区</p>
+                        <!-- 暂无 -->
+                    </div>
+                    <div class="results advantage" id="advantage">
+                        <p>优势共识区</p>
+                        <!-- 暂无 -->
+
+                    </div>
+                    <div class="results develop" style="margin-right: 25px;" id="develop">
+                        <p>待发展共识区</p>
+                        <!-- 渲染 -->
+
+                    </div>
+                    <div class="results blindSpots" id="blindSpots">
+                        <p>盲点</p>
+                        <!-- 渲染 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture0714.png" alt="">
+    </section>
+
+    <!-- <section class="advic sheet">
+        <img src="./img/TheHighLevel_picture02（4）.png" alt="">
+        <div class="border">
+            <div class="content">
+                <p>根据能力对比分析，在管理者10条能力素质中您应该重点关注被列入“盲点”和“待发展共识区”的能力素质。以下建议供您参考，塑造更好的自己。</p>
+                <table id="table"></table>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（13）.png" alt="">
+    </section> -->
+
+    <section class="footer sheet">
+        <img src="./img/TheHighLevel_picture051.png" alt="">
+    </section>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="./js/TheHighLevel.js"></script>

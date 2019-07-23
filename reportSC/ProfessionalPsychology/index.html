@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>职业心理健康</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+    <link rel="stylesheet" href="../css/react.css">
+    <link rel="stylesheet" href="./css/ProfessionalPsychology.css">
+</head>
+
+<body body class="A4">
+    <section class="index sheet">
+        <img src="./img/PPSY2019_picture01.png" style="margin-top: -10px">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span id="Name">刘坚</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span id="Gender">女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span id="Age">18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span id="TestTime">2019年3月28日</span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/PPSY2019_picture06.png" style="height: 10%;margin-top: -2mm;">
+    </section>
+
+    <section class="explain sheet">
+        <img src="./img/PPSY2019_picture02.png" alt="" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="con_top">
+                    <div class="char">测验说明</div>
+                    <div class="jiao"></div><br><br><br><br>
+                    <p>心理健康检查是格略集团心理管理研究院联合中国心理卫生协会职业心理 健康促进专业委员会，根据员工心理健康的典型行为样本进行开发和编制。测验
+                        从17个方面对心理发展状况进行普查，分别为躯体反应、回避行为、幻想行为、 自责行为、 强迫行为、偏执心理、嫉妒心理、人际适应、孤独感受、依赖心理、
+                        猜疑心理、焦虑情绪、冲动控制、抑郁倾向、环境适应、恐惧心理、身心同一。</p>
+                    <table>
+                        <tr style="background-color: #EDEDED;">
+                            <th>症状等级</th>
+                            <th>症状等级定性</th>
+                            <th>代表颜色</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>健康</td>
+                            <td style="background-color: #45CD7D;">绿色</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>健康</td>
+                            <td style="background-color: #3F88FF">蓝色</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>轻度</td>
+                            <td style="background-color: #FAE046;">黄色</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>中度</td>
+                            <td style="background-color: #FCBB4D;">橙色</td>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td>预警</td>
+                            <td style="background-color: #EC5656;">红色</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="con_bom">
+                    <div class="char">报告阅读建议</div>
+                    <div class="jiao"></div><br><br><br><br>
+                    <p>1 . 测验结果只能作为员工了解和发展自己及组织整体分析和员工帮助之用。 </p>
+                    <p>2 . 本测验仅作为员工心理发展状态的普查，不是心理障碍的医学诊断工具。 </p>
+                    <p>3 . 本测验不是个体心理状态的唯一工具，需要借助专家或其他方法进行综合 </p>
+                    <p>4 . 本测验的效度受很多因素的影响</p>
+                    <div class="attention" style="overflow: hidden;margin-left: 25px;">
+                        <p class="yuandian"></p>
+                        <p class="wenzi">答题时是否存在内外部的干扰因素。</p>
+
+                        <p class="yuandian"></p>
+                        <p class="wenzi">答题时有意无意地回避了真实情况。</p>
+
+                        <p class="yuandian"></p>
+                        <p class="wenzi">理解是否与测验指标的内涵一致。</p>
+                    </div>
+                    <p>5 . 谨慎解读测评报告，不要误读、扭曲或夸大，必要时需要借助专业人士。 </p>
+                    <p>6 . 测验严格遵循心理测量的道德准则，保护员工隐私，尊重员工发展权益。 </p>
+                    <p>7 . 本报告的专业解释由格略集团心理管理研究院执行，如需帮助请联系我们。</p>
+                    <pre>联系电话: 021-63531261            电子邮箱: gelue@gelue.com</pre>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07.png" alt="">
+    </section>
+
+    <section class="histogram sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <pre>作答时间：<i id="CompletionTime" style="font-weight: bold">17分53秒</i>         <i id="Validity" style="font-weight: bold">回答较为真实，没有掩饰，结果可以相信</i></pre>
+                <div class="char">测评结果</div>
+                <div class="jiao"></div><br><br><br><br><br>
+                <h1>1. 总体描述性分析数据图</h1>
+                <div class="graph" id="graph"></div>
+                <br><br>
+                <h1>2、典型特征</h1><br>
+                <div class="trait yellow" id="yellow">
+                    <span>黄色指标:</span>
+                </div>
+
+                <div class="trait orger" id="orger">
+                    <span>橙色指标:</span>
+                    <!-- <p>暂无</p> -->
+                </div>
+
+                <div class="trait red" id="red">
+                    <span>红色指标:</span>
+                    
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(1).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="char">详细解释</div>
+                <div class="jiao"></div><br><br><br><br><br>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>躯体反应</p>
+                    <div id="qtfy">
+                        <ul>一般来说，您具有良好的身体状态，可能的表现为:
+                            <li>精力充沛，具有较强的工作兴趣和较高的工作效率</li>
+                            <li>极少产生持久而强烈的身体疼痛感</li>
+                            <li>即使产生身体疲劳感，也能通过休息很快恢复</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>回避行为</p>
+                    <div id="hbxw"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>幻想行为</p>
+                    <div id="hxxw"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>自责行为</p>
+                    <div id="zzxw" class="tit_con"></div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(2).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>强迫行为</p>
+                    <div id="qpxw"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>偏执心理</p>
+                    <div id="pzxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>嫉妒心理</p>
+                    <div id="jdxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>人际适应</p>
+                    <div id="rjsy"></div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(3).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>孤独感受</p>
+                    <div id="gdgs"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>依赖心理</p>
+                    <div id="ylxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>猜疑心理</p>
+                    <div id="cyxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>焦虑情绪</p>
+                    <div id="jlxl"></div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(4).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>冲动控制</p>
+                    <div id="cdkz"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>抑郁倾向</p>
+                    <div id="yyqx"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>环境适应</p>
+                    <div id="hjsy"></div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/PPSY2019_picture07(4).png" alt="">
+    </section>
+
+    <section class="detailed sheet">
+        <img src="./img/PPSY2019_picture02(1).png" style="margin-top: -1px;width: 101%;margin-left: -1px;">
+        <div class="border">
+            <div class="content">
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>恐惧心理</p>
+                    <div id="kjxl"></div>
+                </div>
+
+                <div class="title" style="overflow: hidden;">
+                    <div class="sanjiao"></div>
+                    <p>身心同一</p>
+                    <div id="sxty""></div>
+                </div>
+            </div>
+        </div>
+        <img src=" ./img/PPSY2019_picture07(4).png" alt="">
+    </section>
+
+    <section class="footer sheet">
+        <img src="./img/PPSY2019_picture05.png" alt="">
+    </section>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
+<script src="./js/ProfessionalPsychology.js"></script>

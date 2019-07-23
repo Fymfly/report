@@ -1,0 +1,961 @@
+.contanier {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    height: '';
+    box-sizing: border-box;
+    font-size: 8px;
+    font-family: 'SourceHanSansCN-Bold';
+
+}
+
+section>img {
+    width: 100%;
+}
+
+.index {
+    padding: 10px 0;
+}
+
+.index .userInfo {
+    height: 18%;
+    background: linear-gradient(to right, #e4e2e3, white);
+    margin-top: -2px;
+}
+
+.index .userInfo ul {
+    overflow: hidden;
+    padding-top: 3.5rem;
+}
+
+.index .userInfo ul li {
+    float: left;
+    text-align: left;
+    font-size: 16px;
+    text-indent: 25px;
+    width: 35%;
+    color: #D3964B;
+    font-family: "SourceHanSansCN-Bold";
+    line-height: 2rem;
+}
+
+.directory .explain {
+    background: rgba(255, 255, 255, 1);
+    height: 90%;
+    margin-top: -10px;
+    position: relative;
+}
+
+.directory .explain ul {
+    width: 75%;
+    height: 55%;
+    margin: 0 auto;
+    position: absolute;
+    top: 13rem;
+    left: 0;
+    right: 0;
+}
+
+.directory .explain ul li {
+    display: inline-block;
+    clear: both;
+    width: 100%;
+    line-height: 3rem;
+    border-bottom: 1px solid #333333;
+    margin-top: 3rem;
+}
+
+.directory .explain ul li .content {
+    float: left;
+}
+
+.directory .explain ul li .content span:nth-of-type(odd) {
+    font-size: 40px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: #D3964B;
+    line-height: 60px;
+}
+
+.directory .explain ul li .content span:nth-of-type(even) {
+    font-size: 23px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: bold;
+    color: #363638;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.directory .explain ul li p {
+    float: right;
+    width: 69px;
+    height: 91px;
+    background: #D3964B;
+    text-align: center;
+    line-height: 91px;
+    font-size: 40px;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 91px;
+    margin-top: 10px;
+}
+
+.instructions .border {
+    height: 88.5%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.instructions .border .content {
+    width: 75%;
+    height: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.instructions .content .char {
+    background-color: #D3964B;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+}
+
+.instructions .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #D3964B;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.instructions .content ul {
+    width: 100%;
+    height: 88.4%;
+    margin-top: 80px;
+}
+
+.instructions .content ul li {
+    width: 100%;
+    height: 28%;
+    margin-bottom: 40px;
+}
+
+.instructions .content ul li .bigimg {
+    float: left;
+    overflow: hidden;
+}
+
+.instructions .content ul li .icon {
+    float: left;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+
+.instructions .content li p {
+    margin-top: -155px;
+    margin-left: 202px;
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+    float: right;
+    text-indent: 1.8em;
+}
+
+
+.management .border {
+    height: 88.5%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.management .border .content {
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.management .content .char {
+    background-color: #D3964B;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+}
+
+.management .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #D3964B;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.management .content .con_big {
+    width: 100%;
+    height: 93%;
+    margin-top: 60px;
+}
+
+.management .content .con_big .con_top {
+    width: 100%;
+    height: 57%;
+    margin-bottom: 25px;
+}
+
+.management .content .con_big p {
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(211, 150, 75, 1);
+    line-height: 22px;
+}
+
+.management .content .con_top img {
+    margin-top: 20px;
+    margin-left: 130px;
+}
+
+.management .content .con_big .con_bom {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 0px;
+}
+
+.management .content .report_chart {
+    background-color: #F3F4F6;
+    width: 100%;
+    height: 80%
+}
+
+
+.score .border {
+    height: 88.5%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.score .border .content {
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+}
+
+.score .content p {
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 22px;
+}
+
+.score .content .con_top {
+    width: 100%;
+    margin-bottom: 6%;
+}
+
+.score .content .con_bom {
+    width: 100%;
+}
+
+.score .content table {
+    width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 45px;
+    margin-top: 20px;
+}
+
+.score .content table tr:nth-child(1) {
+    background-color: #ECECED;
+    border-bottom: none;
+}
+
+.score .content table tr {
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.score .content table tr td {
+    padding-left: 30px;
+}
+
+.score .content .con_bom th {
+    padding-left: 25px;
+}
+
+.score .content .con_bom td {
+    padding-left: 34px;
+}
+
+
+.overview .border {
+    height: 88.5%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.overview .border .content {
+    width: 80%;
+    height: 76%;
+    margin: 0 auto;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+}
+
+.overview .content .char {
+    background-color: #D3964B;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+}
+
+.overview .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #D3964B;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.overview .content p {
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(211, 150, 75, 1);
+    line-height: 22px;
+}
+
+.overview .content .con_top {
+    width: 100%;
+    height: 46%;
+    margin-top: 65px;
+    margin-bottom: 5%;
+}
+
+.overview .content .con_top .scanning {
+    width: 100%;
+    height: 80%;
+    background-color: #F3F4F6;
+}
+
+.overview .content .con_bom {
+    width: 100%;
+    height: 40%;
+}
+
+.overview .content .con_bom .ProsCons {
+    width: 100%;
+    height: 30%;
+    background-color: #E8E8E8;
+    margin-top: 22px;
+}
+
+.overview .content .ProsCons .pc_top {
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #c2c2c2;
+    display: inline-block;
+}
+
+.overview .content .ProsCons .pc_top .pctop_l {
+    width: 50%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.overview .content .ProsCons p {
+    font-size: 14px;
+    font-family: PingFangSC-Medium;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 3em;
+    margin-left: 15px;
+}
+
+.overview .content .ProsCons .pc_top .pctop_r {
+    width: 50%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.overview .content .ProsCons .pc_bom {
+    width: 100%;
+    height: 50%;
+    display: inline-block;
+}
+
+.overview .content .ProsCons .pc_bom .pcbom_l {
+    width: 50%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.overview .content .ProsCons .pc_bom .pcbom_r {
+    width: 50%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+
+.selfAssessment .border {
+    height: 88.5%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.selfAssessment .border .content {
+    width: 87%;
+    height: 88%;
+    margin: 0 auto;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+}
+
+.selfAssessment .content .char {
+    background-color: #D3964B;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+}
+
+.selfAssessment .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #D3964B;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.selfAssessment .content .con_cen {
+    width: 100%;
+    height: 85%;
+    margin-top: 65px;
+}
+
+.selfAssessment .content .con_cen p {
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(211, 150, 75, 1);
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.selfAssessment .content .con_cen ul {
+    width: 100%;
+    height: 48%;
+    margin-bottom: 35px;
+}
+
+.selfAssessment .content .con_cen ul li {
+    width: 100%;
+    height: 18%;
+    position: relative;
+    border-left: 1px solid rgba(236, 236, 237, 1);
+    border-right: 1px solid rgba(236, 236, 237, 1);
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.middle {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 11px;
+}
+
+.selfAssessment .content .con_cen ul>li:nth-child(1) {
+    width: 100%;
+    height: 27%;
+    background-color: #f3f4f6;
+}
+
+.selfAssessment .content .con_cen ul li:nth-child(1) span {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    overflow: hidden;
+}
+
+.selfAssessment .content .con_cen ul li:nth-of-type(even) {
+    background-color: #f3f4f6;
+}
+
+.selfAssessment .content .con_cen .progress {
+    width: 67%;
+    height: 30px;
+    margin-top: 0px;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    overflow: hidden;
+}
+
+.selfAssessment .content .con_cen i {
+    float: left;
+    overflow: hidden;
+    margin-left: 9px;
+    margin-right: 5px;
+    font-size: 14px;
+    margin-top: 6px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.selfAssessment .content .con_cen i:nth-of-type() {
+    margin-top: -23px;
+    margin-right: 15px;
+    float: right;
+    overflow: hidden;
+}
+
+.selfAssessment .content .color_r {
+    background-color: rgba(211, 75, 75, 1) !important;
+}
+
+.selfAssessment .content .color_y {
+    background-color: rgba(240, 175, 48, 1) !important;
+}
+
+.selfAssessment .content .color_g {
+    background-color: rgba(75, 211, 140, 1) !important;
+}
+
+.selfAssessment .content .con_cen .progress ul li {
+    background-color: rgba(196, 195, 195, 1);
+}
+
+.selfAssessment .content .con_cen .progress ul {
+    width: 93%;
+    height: 100%;
+}
+
+.selfAssessment .content .con_cen .progress ul li {
+    width: 18%;
+    float: left;
+    height: 100%;
+    margin-right: 1px;
+}
+
+.selfAssessment .content .con_cen ul li .font_size {
+    font-size: 14px;
+    line-height: 35px;
+}
+
+.selfAssessment .content .con_cen ul li p {
+    display: inline-block;
+    padding-top: 10px;
+    color: rgba(51, 51, 51, 1);
+    width: 93%;
+    padding-left: 15px;
+}
+
+
+.heReview .border {
+    height: 88.5%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.heReview .border .content {
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+}
+
+.heReview .content .char {
+    background-color: #D3964B;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+}
+
+.heReview .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #D3964B;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.heReview .content .con_cen {
+    width: 100%;
+    height: 95%;
+    margin-top: 65px;
+}
+
+.heReview .content .con_cen p {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.heReview .content .con_cen table {
+    width: 100%;
+    height: 93%;
+    border: 1px solid #e8e8e8;
+}
+
+.heReview .content .con_cen tr {
+    border: 1px solid #e8e8e8;
+}
+
+.heReview .content .con_cen th {
+    border: 1px solid #e8e8e8;
+    font-size: 14px;
+    font-family: PingFangSC-Medium;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 35px;
+    background-color: rgba(236, 236, 237, 1);
+}
+
+.heReview .content .con_cen td {
+    border: 1px solid #e8e8e8;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 21px;
+}
+
+.heReview .content .con_cen td:nth-child(1) {
+    padding-left: 15px;
+}
+
+.heReview .content .con_cen tr td:nth-child(3) {
+    text-align: center;
+}
+
+.heReview .content .con_cen tr td pre {
+    border-bottom: 1px solid #e8e8e8;
+    line-height: 26px;
+    margin-top: 0px;
+    padding: 6px;
+    width: 97%;
+    height: 25%;
+}
+
+.heReview .content .con_cen tr td:nth-child(3n) pre {
+    width: 90%;
+}
+
+.heReview .content .con_cen tr td pre:nth-child(4) {
+    border: none;
+}
+
+.heReview .content .con_cen tr td pre:nth-of-type(even) {
+    background-color: #f3f4f6;
+}
+
+
+.contrast .border {
+    height: 88.5%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.contrast .border .content {
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.contrast .content .char {
+    background-color: #D3964B;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+}
+
+.contrast .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #D3964B;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.contrast .content p {
+    margin-top: 10%;
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+    margin-bottom: 4%;
+}
+
+.contrast .content .line {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(243, 244, 246, 1);
+    margin-top: 20px;
+}
+
+.contrast .content .sm_title {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(120, 120, 120, 1);
+    line-height: 24px;
+    margin: -12px 240px;
+    width: 152px;
+}
+
+.contrast .content .sm_title .zjiao {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 11px solid rgba(211, 150, 75, 1);
+    float: left;
+    margin-right: 9px;
+    margin-top: 8px;
+}
+
+.contrast .content .con_bom {
+    width: 100%;
+    height: 36%;
+    margin-top: 3%;
+}
+
+.contrast .content .con_bom .results {
+    width: 48%;
+    height: 47%;
+    background-color: rgba(236, 236, 237, 1);
+    float: left;
+    margin-bottom: 3%;
+}
+
+.contrast .content .con_bom .results p {
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: rgba(211, 150, 75, 1);
+    line-height: 24px;
+}
+
+.contrast .content .con_bom .results pre {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.contrast .content .con_bom .results .zw {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(120, 120, 120, 1);
+    line-height: 18px;
+}
+
+.contrast .content .con_bom .results .cont {
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    column-count: 1;
+}
+
+.contrast .content .con_bom .results .con {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 23px;
+    margin-left: 19px;
+    width: 22%;
+    height: 23%;
+}
+
+.contrast .content .con_bom .results .cont li:nth-child(5) {
+    margin-left: -210px;
+}
+
+.contrast .content .con_bom .results .cont li:nth-child(6) {
+    margin-left: -210px;
+}
+
+.contrast .content .con_bom .results .cont li:nth-child(7) {
+    margin-left: -210px;
+}
+
+.contrast .content .con_bom .results .cont li:nth-child(8) {
+    margin-left: -210px;
+}
+
+.contrast .content .con_bom .results .cont li:nth-child(9) {
+    margin-left: -438px;
+}
+
+.contrast .content .con_bom .results .cont li:nth-child(10) {
+    margin-left: -438px;
+}
+
+
+.advic .border {
+    height: 88.35%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.advic .border .content {
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.advic .content p {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.advic .content td p {
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 17px;
+    padding-left: 16px;
+    width: 93%;
+    padding-top: 5px;
+}
+
+.advic .content table {
+    width: 100%;
+}
+
+.advic .content table tr:nth-child(1) {
+    height: 7%;
+    font-size: 14px;
+    font-family: PingFangSC-Medium;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 21px;
+    border: 1px solid #e8e8e8;
+    background-color: rgba(236, 236, 237, 1);
+}
+
+.advic .content table tr td {
+    border: 1px solid #e8e8e8;
+}
+
+.advic .content table tr td:nth-child(2) {
+    width: 80%;
+    border: 1px solid #e8e8e8;
+    padding: 5px;
+}
+
+.advic .content table tr td:nth-child(1) {
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 21px;
+    padding-left: 20px;
+    border: 1px solid #e8e8e8;
+}
+
+.advic .content table tr td .num {
+    float: left;
+    overflow: hidden;
+    margin-top: 0px;
+}
+
+.advic .content table tr td .wenzi {
+    float: left;
+    margin-top: -42px;
+    overflow: hidden;
+    margin-left: 17px;
+}
+
+.advic .page {
+    background-image: url('./../img/TheHighLevel_picture07.png');
+    height:29px;    
+    text-align: center;
+    line-height: 29px;
+    font-size: 10px;
+}

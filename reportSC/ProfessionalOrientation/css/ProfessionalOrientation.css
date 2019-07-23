@@ -1,0 +1,366 @@
+.contanier{
+    width:100%;
+}
+section{
+    width: 100%;
+    height:'';
+    box-sizing: border-box;
+    font-size: 8px;
+    font-family: 'SourceHanSansCN-Bold';
+    
+}
+section>img{
+    width:100%;
+}
+.index {
+    padding:10px 0;
+}
+
+.index .userInfo {
+    height: 18%;
+    background: linear-gradient(to right, #e4e2e3, white);
+    margin-top: -2px;
+}
+
+.index .userInfo ul{
+    overflow: hidden;
+    padding-top: 3.5rem;
+}
+
+.index .userInfo ul li{
+    float: left;
+    text-align: left;
+    font-size: 16px;
+    text-indent: 25px;
+    width: 35%;
+    color: #6AB8C5;
+    font-family: "SourceHanSansCN-Bold";
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+
+.directory .explain {
+    background:rgba(255,255,255,1);
+    height: 90%;
+    margin-top: -10px;
+    position: relative;
+}
+
+.directory .explain ul {
+    width: 75%;
+    height: 55%;
+    margin: 0 auto;
+    position: absolute;
+    top: 13rem;
+    left: 0;
+    right: 0;
+}
+
+.directory .explain ul li {
+    display: inline-block;
+    clear: both;
+    width: 100%;
+    line-height: 3rem;
+    border-bottom: 1px solid #333333;
+    margin-top: 3rem;
+}
+
+.directory .explain ul li .content {
+    float: left;
+}
+
+.directory .explain ul li .content span:nth-of-type(odd) {
+    font-size:40px;
+    font-family:SourceHanSansCN-Bold;
+    font-weight:bold;
+    color:rgba(106,184,197,1);
+    line-height:60px;
+} 
+
+.directory .explain ul li .content span:nth-of-type(even) {
+    font-size: 23px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight: bold;
+    color: rgba(54,54,56,1);
+    line-height: 30px;
+    display: inline-block;
+}
+
+.directory .explain ul li p {
+    float: right;
+    width: 69px;
+    height: 91px;
+    background: rgba(106,184,197,1);
+    text-align: center;
+    line-height: 91px;
+    font-size: 40px;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    color: rgba(255,255,255,1);
+    line-height: 91px;
+    margin-top: 10px;
+}   
+
+.introduction .border {
+    height: 89.3%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.introduction .content {
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;   
+}
+
+.introduction .content p {
+    font-size:16px;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:24px;
+    width: 92%;
+    margin: 0 auto; 
+    margin-bottom: 1rem;    
+}
+
+.introduction .content img {
+    width: 23rem;
+    margin-left: 9rem;
+    margin-top: 1rem;
+}
+
+.introduction .content  .lit-title {
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.introduction .content .char{
+    background-color: #6AB8C5;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+    line-height: 1.5em;
+}
+
+.introduction .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #6AB8C5;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.introduction .content .tit_list {
+    width: 85%;
+    margin-top: -40px
+}
+
+
+
+.results .border {
+    height: 88.5%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.results .content {
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;  
+}
+
+.results .content .char{
+    background-color: #6AB8C5;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+    line-height: 1.5em;
+}
+
+.results .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #6AB8C5;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.results .content p {
+    font-size:16px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:24px;
+    margin-top: 4rem;
+    color: #333;
+}
+
+.results .content .histogram {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 63%;
+}
+
+.results .res_type {
+    width: 60%;
+    height: 15%;
+    margin-top: 1rem;
+    display: inline-block;
+    clear: both;
+    text-align: left;
+}
+
+.results .res_type .type_l {
+    float: left;
+    /* height: 100%; */
+    background-color: hsla(189, 44%, 59%, 0.2);
+    /* width: 40%; */
+    padding-bottom: 1em;
+}
+
+.results .res_type .type_r {
+    float: right;
+    /* height: 100%; */
+    background-color: hsla(189, 44%, 59%, 0.2);
+    /* width: 50%; */
+    padding-bottom: 1em;
+}
+
+.results .res_type span {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: rgba(51,51,51,1);
+    line-height: 3.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.results .res_type p {
+    font-size: 24px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: hsla(189, 44%, 59%, 1);
+    margin-top: -1rem;
+    margin-right: 1rem;
+    line-height: 44px;
+    padding-left: 0.6em;
+}
+
+
+
+.trait .border {
+    height: 88.5%;
+    margin-top: -2px;
+    position: relative;
+}
+
+.trait .content {
+    width: 85%;
+    height: 94%;
+    margin: 0 auto;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+}
+
+.trait .border .content p {
+    font-size:16px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight: bold;
+    color:rgba(51,51,51,1);
+    line-height:24px;
+}
+
+.trait .border .content p span {
+    color: rgba(106, 184, 197, 1);
+}
+
+.trait .border .content .trait_list {
+    background-color: rgba(243, 244, 246, 1);
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    padding-bottom: 1.25rem;
+    overflow: hidden;
+}
+
+.trait .border .content .trait_list>p {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: rgba(51,51,51,1);
+    line-height: 5px;
+}
+.trait_list_a{
+    overflow: hidden;
+}
+.trait_list_b{
+    overflow: hidden;
+}
+.trait_list_c{
+    overflow: hidden;
+}
+.trait_list_d{
+    overflow: hidden;
+}
+.trait_list_name{
+    height: 24px;
+    line-height: 2!important;
+    overflow: hidden;
+    display:block;
+    padding:5px 0;
+}
+
+.sm_title {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.trait .border .content .trait_list .yaundian {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgba(106, 184, 197, 1);
+    margin-top: 1rem; 
+    float: left;
+}
+
+.trait .border .content .trait_list .wenzi {
+    margin-top: -1rem;
+  
+    font-size: 16px;
+    width: 100%;
+    text-indent: 18px;
+    line-height: 26px;
+    float: left;
+}
+.page{
+    background:url('../img/CO2019_picture07.png') no-repeat;
+    height:29px;
+    text-align: center;
+    line-height: 29px;
+    font-size: 10px;
+}
