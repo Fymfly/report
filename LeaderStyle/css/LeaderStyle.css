@@ -1,0 +1,332 @@
+@font-face {
+    font-family: "SourceHanSansCN-Bold";
+    src: url("./typeface/SourceHanSansCN-Bold.woff2") format("woff2"),
+        url("./typeface/SourceHanSansCN-Bold.woff") format("woff"),
+        url("./typeface/SourceHanSansCN-Bold.ttf") format("truetype"),
+        url("./typeface/SourceHanSansCN-Bold.eot") format("embedded-opentype"),
+        url("./typeface/SourceHanSansCN-Bold.svg") format("svg");
+}
+
+.contanier {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    height: '';
+    box-sizing: border-box;
+    font-size: 8px;
+    font-family: 'SourceHanSansCN-Bold';
+
+}
+
+section>img {
+    width: 100%;
+}
+
+
+.index {
+    padding: 10px 0;
+}
+
+.index .userInfo {
+    height: 18.5%;
+    background: linear-gradient(to right, #e4e2e3, white);
+    width: 95%;
+    margin: -2px auto;
+}
+
+.index .userInfo ul {
+    overflow: hidden;
+    padding-top: 3.5rem;
+}
+
+.index .userInfo ul li {
+    float: left;
+    text-align: left;
+    font-size: 16px;
+    text-indent: 25px;
+    width: 35%;
+    color: #825693;
+    font-family: "SourceHanSansCN-Bold";
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+
+
+.Introduction .border {
+    width: 100%;
+    height: 83.5%;
+    margin-top: -2px;
+    padding-top: 55px;
+}
+
+.Introduction .border .content {
+    height: 90vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Introduction .content .char {
+    background-color: #825693;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+    line-height: 21px;
+}
+
+.Introduction .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #825693;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.Introduction .content>p {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51,51,51,1);
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.Introduction .content  p {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 25px;
+}
+
+.Introduction .content .attention .yuandian {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #825693;
+    float: left;
+}
+
+.Introduction .content  .attention .wenzi {
+    margin-left: 13px;
+    margin-top: -9px;
+    line-height: 35px;
+}
+
+.Introduction .content>pre {
+    font-size: 16px;
+    font-family: SourceHanSansCN-Bold;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 21px;
+    margin-top: 20px;
+}
+
+
+.results .border {
+    width: 100%;
+    height: 83.5%;
+    margin-top: -2px;
+    padding-top: 55px;
+}
+
+.results .border .content {
+    height: 90vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.results .content .char {
+    background-color: #825693;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+    line-height: 21px;
+}
+
+.results .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #825693;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.results .content .chart {
+    width: 100%;
+    height: 45%;
+    background-color: #F0F0F0;
+}
+
+.results .content .trait {
+    width: 96%;
+    margin-bottom: 20px;
+    background-color: #F0F0F0;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+
+.results .content .trait>p {
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:21px;
+}
+
+.reuslts .content .red>p:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.results .content .trait span {
+    font-size:16px;
+    font-family:SourceHanSansCN-Bold;
+    font-weight:bold;
+    color:rgba(130,86,147,1);
+    line-height:24px;
+    float: left;
+    margin-right: 15px;
+}
+
+
+
+
+.adjunct .border {
+    width: 100%;
+    height: 86%;
+    margin-top: -30px;
+    padding-top: 55px;
+}
+
+.adjunct .border .content {
+    height: 98%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.adjunct .content .char {
+    background-color: #825693;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-family: "SourceHanSansCN-Bold";
+    font-weight: bold;
+    height: 23px;
+    float: left;
+    line-height: 21px;
+}
+
+.adjunct .content .jiao {
+    width: 0px;
+    height: 0px;
+    border-left: solid 15px #825693;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    float: left;
+    margin-left: -1px;
+}
+
+.adjunct .content .adj_div {
+    width: 100%;
+    height: 46%;
+    margin-bottom: 11px;
+}
+
+.adjunct .content .adj_div .adj_tit {
+    font-size:15px;
+    font-family:SourceHanSansCN-Bold;
+    font-weight:bold;
+    color:rgba(130,86,147,1);
+    line-height:21px;
+    
+}
+
+.adjunct .content .adj_div>p {
+    font-size:15px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:18px;
+}
+
+.adjunct .content .adj_div .icon {
+    overflow: hidden;
+}
+
+.adjunct .content .adj_div .icon>img {
+    float: left;
+    margin-right: 15px;
+    margin-top: 20px;
+}
+
+.adjunct .content .adj_div .icon>p {
+    margin-top: 20px;
+    font-size:15px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:18px;
+}
+
+.adjunct .content .adj_div .icon2 {
+    overflow: hidden;
+}
+
+.adjunct .content .adj_div .icon2>img {
+    float: left;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.adjunct .content .adj_div .icon2>p {
+    margin-top: 10px;
+    font-size:15px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:18px;
+}
+
+.adjunct .content .adj_div .adj_con {
+    margin-top: 20px;
+}
+
+.adjunct .content .adj_div .adj_con>p {
+    font-size:15px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:18px;
+    overflow: hidden;
+}
+
+.adjunct .content .adj_div .num {
+    float: left;
+}
+
+.adjunct .content .adj_div .adj_con>p:nth-child(1) {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.adjunct .content .adj_div .more {
+    font-size: 15px;
+    margin-top: 10px;
+    float: left;
+    overflow: hidden;
+    width: 95%;
+}
