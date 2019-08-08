@@ -1,3 +1,13 @@
+
+@font-face {
+    font-family: 'SourceHanSansCN-Bold';
+    src: url("./typeface/SourceHanSansCN-Bold.woff2") format("woff2"),
+        url("./typeface/SourceHanSansCN-Bold.woff") format("woff"),
+        url("./typeface/SourceHanSansCN-Bold.ttf") format("truetype"),
+        url("./typeface/SourceHanSansCN-Bold.eot") format("embedded-opentype"),
+        url("./typeface/SourceHanSansCN-Bold.svg") format("svg");
+}
+
 .contanier{
     width:100%;
 }
@@ -34,7 +44,7 @@ section>img{
     text-indent: 25px;
     width: 35%;
     color: #6AB8C5;
-    font-family: "SourceHanSansCN-Bold";
+    font-family: SourceHanSansCN-Bold;
     line-height: 2rem;
     font-weight: bold;
 }
@@ -95,7 +105,7 @@ section>img{
     text-align: center;
     line-height: 91px;
     font-size: 40px;
-    font-family: "SourceHanSansCN-Bold";
+    font-family: SourceHanSansCN-Bold;
     font-weight: bold;
     color: rgba(255,255,255,1);
     line-height: 91px;
@@ -120,7 +130,7 @@ section>img{
 
 .introduction .content p {
     font-size:16px;
-    font-family: "SourceHanSansCN-Bold";
+    font-family: SourceHanSansCN-Bold;
     font-weight:bold;
     color:rgba(51,51,51,1);
     line-height:24px;
@@ -145,7 +155,7 @@ section>img{
     padding: 8px;
     font-size: 14px;
     color: white;
-    font-family: "SourceHanSansCN-Bold";
+    font-family: SourceHanSansCN-Bold;
     font-weight: bold;
     height: 23px;
     float: left;
@@ -190,7 +200,7 @@ section>img{
     padding: 8px;
     font-size: 14px;
     color: white;
-    font-family: "SourceHanSansCN-Bold";
+    font-family: SourceHanSansCN-Bold;
     font-weight: bold;
     height: 23px;
     float: left;
