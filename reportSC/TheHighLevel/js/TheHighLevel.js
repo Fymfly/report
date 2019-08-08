@@ -1,3 +1,4 @@
+
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
@@ -12,6 +13,7 @@ function GetQueryString(name) {
 let people_result_id = this.GetQueryString('people_result_id');
 
 $.ajax({
+    // url: 'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
     url:'http://new.iwedoing.com/api/client/v1/front/report/data/',
     type: 'POST',
     data: {
@@ -448,15 +450,15 @@ function AddDom(data) {
 
     if (keynum <= 3) {
         let newadv = $(`<section class="advic sheet">
-            <img src="./img/TheHighLevel_picture024.png" alt="">
-            <div class="border">
-                <div class="content">
-                    <p>根据能力对比分析，在管理者10条能力素质中您应该重点关注被列入“盲点”和“待发展共识区”的能力素质。以下建议供您参考，塑造更好的自己。</p>
-                    <table id="table"></table>
+                <img src="./img/TheHighLevel_picture02（4）.png" alt="">
+                <div class="border">
+                    <div class="content">
+                        <p>根据能力对比分析，在管理者10条能力素质中您应该重点关注被列入“盲点”和“待发展共识区”的能力素质。以下建议供您参考，塑造更好的自己。</p>
+                        <table id="table"></table>
+                    </div>
                 </div>
-            </div>
-            <div class="page">第13页</div>
-        </section>`)
+                <div class="page">第12页</div>
+            </section>`)
 
         $('.after').after(newadv)
 
@@ -492,16 +494,16 @@ function AddDom(data) {
             })
         })
     } else if (keynum > 3 || keynum <= 6) {
-        
+
         let newadv2 = $(`<section class="advic sheet after3">
-                <img src="./img/TheHighLevel_picture024.png" alt="">
-                <div class="border">
-                    <div class="content">
-                        <table id="table"></table>
+                    <img src="./img/TheHighLevel_picture02（4）.png" alt="">
+                    <div class="border">
+                        <div class="content">
+                            <table id="table"></table>
+                        </div>
                     </div>
-                </div>
-                <div class="page">第14页</div>
-            </section>`)
+                    <div class="page">第13页</div>
+                </section>`)
 
         $('.after2').after(newad2)
 
@@ -538,14 +540,14 @@ function AddDom(data) {
     } else if (keynum >= 6 || keynum <= 9) {
 
         let newadv3 = $(`<section class="advic sheet after4">
-                <img src="./img/TheHighLevel_picture024.png" alt="">
-                <div class="border">
-                    <div class="content">
-                        <table id="table"></table>
+                    <img src="./img/TheHighLevel_picture02（4）.png" alt="">
+                    <div class="border">
+                        <div class="content">
+                            <table id="table"></table>
+                        </div>
                     </div>
-                </div>
-                <div class="page">第14页</div>
-            </section>`)
+                    <div class="page">第14页</div>
+                </section>`)
 
         $('.after3').after(newadv3)
 
@@ -582,14 +584,14 @@ function AddDom(data) {
     } else if (keynum <= 10) {
 
         let newadv4 = $(`<section class="advic sheet">
-                <img src="./img/TheHighLevel_picture024.png" alt="">
-                <div class="border">
-                    <div class="content">
-                        <table id="table"></table>
+                    <img src="./img/TheHighLevel_picture02（4）.png" alt="">
+                    <div class="border">
+                        <div class="content">
+                            <table id="table"></table>
+                        </div>
                     </div>
-                </div>
-                <div class="page">第15页</div>
-            </section>`)
+                    <div class="page">第15页</div>
+                </section>`)
 
         $('.after4').after(newadv4)
 
@@ -625,7 +627,7 @@ function AddDom(data) {
     }
 
 
-    
+
     // 雷达图
     var option = {
         dataName: [],
@@ -677,16 +679,16 @@ function AddEchart(data) {
         polar: [
             {
                 indicator: [
-                    { text: data.dataName[0], max: 5 },
-                    { text: data.dataName[1], max: 5 },
-                    { text: data.dataName[2], max: 5 },
-                    { text: data.dataName[3], max: 5 },
                     { text: data.dataName[4], max: 5 },
-                    { text: data.dataName[5], max: 5 },
-                    { text: data.dataName[6], max: 5 },
                     { text: data.dataName[7], max: 5 },
-                    { text: data.dataName[8], max: 5 },
+                    { text: data.dataName[10], max: 5 },
                     { text: data.dataName[9], max: 5 },
+                    { text: data.dataName[8], max: 5 },
+                    { text: data.dataName[2], max: 5 },
+                    { text: data.dataName[5], max: 5 },
+                    { text: data.dataName[3], max: 5 },
+                    { text: data.dataName[1], max: 5 },
+                    { text: data.dataName[6], max: 5 },
                 ],
                 center: ['50%', '50%'],
                 radius: 100
@@ -706,7 +708,7 @@ function AddEchart(data) {
                 },
                 data: [
                     {
-                        value: [data.dataOther[0], data.dataOther[1], data.dataOther[2], data.dataOther[3], data.dataOther[4], data.dataOther[5], data.dataOther[6], data.dataOther[7], data.dataOther[8], data.dataOther[9]],
+                        value: [data.dataOther[4], data.dataOther[7], data.dataOther[10], data.dataOther[9], data.dataOther[8], data.dataOther[2], data.dataOther[5], data.dataOther[3], data.dataOther[1], data.dataOther[6]],
                         name: '他评',
                         symbol: 'star5',
                         symbolSize: 4,           // 可计算特性参数，空数据拖拽提示图形大小
@@ -714,7 +716,8 @@ function AddEchart(data) {
                             normal: {
                                 lineStyle: {
                                     type: 'dashed'
-                                }
+                                },
+                                color: '#4BD38C'
                             }
                         },
                         lineStyle: {                // 单项线条样式。
@@ -725,13 +728,14 @@ function AddEchart(data) {
                         //rgba(75, 211, 140, 1)
                     },
                     {
-                        value: [data.dataSelf[0], data.dataSelf[1], data.dataSelf[2], data.dataSelf[3], data.dataSelf[4], data.dataSelf[5], data.dataSelf[6], data.dataSelf[7], data.dataSelf[8], data.dataSelf[9]],
+                        value: [data.dataSelf[4], data.dataSelf[7], data.dataSelf[10], data.dataSelf[9], data.dataSelf[8], data.dataSelf[2], data.dataSelf[5], data.dataSelf[3], data.dataSelf[1], data.dataSelf[6]],
                         name: '自评',
                         itemStyle: {
                             normal: {
                                 areaStyle: {
                                     type: 'default'
-                                }
+                                },
+                                color: 'rgba(126, 75, 211, 0.9)'   
                             },
 
                         },

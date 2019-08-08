@@ -135,6 +135,7 @@ function AddDom(data) {
     $('#Age').text(data.Age)
     $('#Gender').text(data.Gender)
     $('#TestTime').text(data.TestTime)
+    $('.Names').text(data.Name)
 
     $('#self_adv').text(data.analysis['自我评价相对优势能力'])
     $('#self_ids').text(data.analysis['自我评价相对劣势能力'])
@@ -651,6 +652,11 @@ function AddDom(data) {
 }
 
 function AddEchart(data) {
+
+    console.log(data.dataName)
+    console.log(data.dataOther)
+    console.log(data.dataSelf)
+
     var myChart = echarts.init(document.getElementById('scanning'));
     // 指定图表的配置项和数据
     var option = {
@@ -678,16 +684,27 @@ function AddEchart(data) {
         polar: [
             {
                 indicator: [
-                    { text: data.dataName[0], max: 5 },
-                    { text: data.dataName[1], max: 5 },
-                    { text: data.dataName[2], max: 5 },
-                    { text: data.dataName[3], max: 5 },
+                    // { text: data.dataName[4], max: 5 },
+                    // { text: data.dataName[6], max: 5 },
+                    // { text: data.dataName[1], max: 5 },
+                    // { text: data.dataName[3], max: 5 },
+                    // { text: data.dataName[5], max: 5 },
+                    // { text: data.dataName[2], max: 5 },
+                    // { text: data.dataName[8], max: 5 },
+                    // { text: data.dataName[9], max: 5 },
+                    // { text: data.dataName[10], max: 5 },
+                    // { text: data.dataName[7], max: 5 },
+
                     { text: data.dataName[4], max: 5 },
-                    { text: data.dataName[5], max: 5 },
-                    { text: data.dataName[6], max: 5 },
                     { text: data.dataName[7], max: 5 },
-                    { text: data.dataName[8], max: 5 },
+                    { text: data.dataName[10], max: 5 },
                     { text: data.dataName[9], max: 5 },
+                    { text: data.dataName[8], max: 5 },
+                    { text: data.dataName[2], max: 5 },
+                    { text: data.dataName[5], max: 5 },
+                    { text: data.dataName[3], max: 5 },
+                    { text: data.dataName[1], max: 5 },
+                    { text: data.dataName[6], max: 5 },
                 ],
                 center: ['50%', '50%'],
                 radius: 100
@@ -707,7 +724,7 @@ function AddEchart(data) {
                 },
                 data: [
                     {
-                        value: [data.dataOther[0], data.dataOther[1], data.dataOther[2], data.dataOther[3], data.dataOther[4], data.dataOther[5], data.dataOther[6], data.dataOther[7], data.dataOther[8], data.dataOther[9]],
+                        value: [data.dataOther[4], data.dataOther[7], data.dataOther[10], data.dataOther[9], data.dataOther[8], data.dataOther[2], data.dataOther[5], data.dataOther[3], data.dataOther[1], data.dataOther[6]],
                         name: '他评',
                         symbol: 'star5',
                         symbolSize: 4,           // 可计算特性参数，空数据拖拽提示图形大小
@@ -715,24 +732,26 @@ function AddEchart(data) {
                             normal: {
                                 lineStyle: {
                                     type: 'dashed'
-                                }
+                                },
+                                color: '#4BD38C'
                             }
                         },
                         lineStyle: {                // 单项线条样式。
                             normal: {
-                                color: 'rgba(75, 211, 140, 1)'         // 图形透明度
+                                // color: 'rgba(75, 211, 140, 1)'         // 图形透明度
                             }
                         },
                         //rgba(75, 211, 140, 1)
                     },
                     {
-                        value: [data.dataSelf[0], data.dataSelf[1], data.dataSelf[2], data.dataSelf[3], data.dataSelf[4], data.dataSelf[5], data.dataSelf[6], data.dataSelf[7], data.dataSelf[8], data.dataSelf[9]],
+                        value: [data.dataSelf[4], data.dataSelf[7], data.dataSelf[10], data.dataSelf[9], data.dataSelf[8], data.dataSelf[2], data.dataSelf[5], data.dataSelf[3], data.dataSelf[1], data.dataSelf[6]],
                         name: '自评',
                         itemStyle: {
                             normal: {
                                 areaStyle: {
                                     type: 'default'
-                                }
+                                },
+                                color: 'rgba(126, 75, 211, 0.9)'   
                             },
 
                         },
